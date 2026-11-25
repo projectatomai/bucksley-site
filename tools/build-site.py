@@ -59,7 +59,7 @@ ORG = {"@type": "Organization", "@id": "https://protomota.com/#protomota", "name
        "url": "https://protomota.com/", "logo": "https://protomota.com/redesign/logo.png", "founder": {"@id": "https://protomota.com/#brad"},
        "sameAs": ["https://github.com/protomota", "https://x.com/protomotalab", "https://youtube.com/@protomota", "https://newsletter.protomota.com"]}
 PERSON = {"@type": "Person", "@id": "https://protomota.com/#brad", "name": "Brad Dunlap", "url": "https://protomota.com/about",
-          "sameAs": ["https://www.linkedin.com/in/bradley-dunlap/", "https://github.com/protomota"]}
+          "sameAs": ["https://www.linkedin.com/in/brad--dunlap/", "https://github.com/protomota"]}
 APP = {"@type": "SoftwareApplication", "@id": f"{SITE}/#app", "name": "Bucksley", "url": f"{SITE}/", "description": DESC,
        "applicationCategory": "FinanceApplication", "applicationSubCategory": "Personal finance and budgeting",
        "operatingSystem": "macOS 15 or later, iOS 18 or later", "isAccessibleForFree": True,
