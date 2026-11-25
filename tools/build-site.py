@@ -158,9 +158,8 @@ def header(current=None, body_class=None):
 '''
 
 
-def footer(family=False, status=True):
+def footer(family=False):
     nav = "".join(f'<a href="{h}">{t}</a>' for h, t in FOOT_NAV)
-    bar = '\n    <div class="statusbar" aria-hidden="true"><div class="shell"><span><i></i>Synced to iCloud</span><span class="grow"></span><span>Read-only</span><span>5 accounts</span><span>Updated 7:02 AM</span></div></div>' if status else ""
     return (FAMILY if family else "") + f'''  <footer>
     <div class="shell footer">
       <a class="product-credit" href="https://protomota.com/" target="_blank" rel="noopener noreferrer"><img src="/assets/protomota-logo.png" width="22" height="22" alt=""><span>A Protomota Product</span></a>
@@ -168,7 +167,7 @@ def footer(family=False, status=True):
     </div>
     <div class="shell footer-credit">
       <span>&copy; <span data-pm-year>2026</span> Protomota</span>
-    </div>{bar}
+    </div>
   </footer>
   <script src="/assets/pm-year.js" defer></script>
 </body>
@@ -584,7 +583,7 @@ def download():
       </div>
     </div>
   </main>
-''' + footer(status=False)
+''' + footer()
         write("download/index.html", h)
         return
     d = "Download Bucksley for Mac. Free, signed and notarized, with automatic updates. Install it, connect your accounts and see the whole picture."
@@ -643,7 +642,7 @@ def download():
       <p>The iPhone app, with the review inbox, Apple Wallet accounts and widgets, is coming. Follow along on the <a href="https://newsletter.protomota.com/">Protomota newsletter</a>.</p>
     </section>
   </main>
-''' + footer(status=False)
+''' + footer()
     write("download/index.html", h)
 
 
@@ -710,7 +709,7 @@ def mcp():
       </div>
     </div>
   </main>
-''' + footer(status=False)
+''' + footer()
     write("mcp/index.html", h)
 
 
@@ -763,7 +762,7 @@ def help_page():
       </div>
     </div>
   </main>
-''' + footer(status=False)
+''' + footer()
     write("help/index.html", h)
 
 
@@ -811,7 +810,7 @@ def privacy():
       </div>
     </div>
   </main>
-''' + footer(status=False)
+''' + footer()
     write("privacy/index.html", h)
 
 
@@ -825,7 +824,7 @@ def notfound():
       <a class="button secondary" href="/help/">{ICON_HELP}Get Help</a>
     </div>
   </main>
-''' + footer(status=False)
+''' + footer()
     write("404.html", h)
 
 

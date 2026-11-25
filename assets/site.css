@@ -416,7 +416,7 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
 .install-steps strong { color: var(--ink); font-weight: 600; }
 
 /* Discord callout, just above the newsletter */
-.discord-callout { display: flex; align-items: center; gap: 24px 32px; margin-bottom: 16px; padding: 32px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); scroll-margin-top: 90px; }
+.discord-callout { display: flex; align-items: center; gap: 24px 32px; margin-block: clamp(40px, 6vw, 72px) 16px; padding: 32px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); scroll-margin-top: 90px; }
 .discord-avatar { flex-shrink: 0; width: 72px; height: 72px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px rgb(245 128 37 / .6), 0 0 22px rgb(245 128 37 / .38); }
 .discord-copy { flex: 1; min-width: 0; }
 .discord-callout h2 { margin: 0 0 10px; font: 650 1.75rem/1.15 var(--sans); letter-spacing: -.03em; }
@@ -446,10 +446,6 @@ h2 em, h1 em { font-style: normal; color: var(--accent); }
 .footer .product-credit, .footer-credit .product-credit { display: inline-flex; align-items: center; flex-shrink: 0; gap: 10px; padding: 9px 16px 9px 10px; border: 1px solid #1d2230; border-radius: 999px; background: #000; color: #fff; font: 600 13.5px/1.4 var(--sans); white-space: nowrap; text-decoration: none; transition: transform .15s; }
 :is(.footer, .footer-credit) .product-credit:hover { color: #fff; transform: translateY(-1px); }
 .product-credit img { display: block; flex-shrink: 0; width: 22px; height: 22px; border-radius: 6px; object-fit: contain; }
-.statusbar { border-top: 1px solid var(--line); background: var(--bg-2); font: .72rem/1 var(--mono); color: var(--muted); }
-.statusbar .shell { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 22px; padding-block: 10px; }
-.statusbar .grow { flex: 1; }
-.statusbar i { display: inline-block; width: 6px; height: 6px; margin-right: 8px; border-radius: 50%; background: var(--up); vertical-align: 1px; }
 
 /* Inner pages: page head, docs layout, tables */
 .page-head { padding-block: clamp(48px, 7vw, 88px) clamp(28px, 4vw, 44px); }
