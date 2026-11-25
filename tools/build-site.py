@@ -15,8 +15,8 @@ import json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://bucksley.ai"
-GA = "G-PENDING"
-GSC = ""  # google-site-verification token for the home page, once Search Console has one
+GA = "G-NZ4KDPXME2"
+GSC = "7iIXr-PMFJ_aGS43oSrPEZ5DRntgBF09yLD61lN2gac"  # google-site-verification token for the home page, once Search Console has one
 BING = "E2001B47E91F72A19BB1E8E642B26928"  # account-wide msvalidate.01 token
 V = "20261125"  # cache-buster for the icon, favicon and social card
 FAMILY = open(os.path.join(ROOT, "tools", "family.html")).read()

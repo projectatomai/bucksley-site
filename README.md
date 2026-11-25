@@ -33,4 +33,4 @@ Then commit `appcast.xml` and the regenerated pages and push `main`. Older DMGs 
 
 ## Analytics
 
-`assets/analytics.js` loads Google Analytics only after a visitor allows it. The measurement ID is `GA` in `tools/build-site.py` (`G-PENDING` until the GA4 property exists), the Search Console token is `GSC`; set them and regenerate the pages.
+`assets/analytics.js` loads Google Analytics only after a visitor allows it. The measurement ID is `GA` in `tools/build-site.py` (GA4 property "Bucksley", stream bucksley.ai), the Search Console token is `GSC`; set them and regenerate the pages.
