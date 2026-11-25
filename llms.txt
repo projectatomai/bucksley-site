@@ -11,8 +11,8 @@ Key facts:
 - License: free and source available.
 - Platform: Mac, macOS 15 or later. The iPhone app (iOS 18 or later) is coming soon and is not on the App Store yet.
 - Install: a signed and notarized disk image from https://bucksley.ai/download/ with signed automatic updates (Sparkle).
-- Download: https://bucksley.ai/downloads/Bucksley-0.1.1.dmg
-- Current release: Bucksley 0.1.1 (build 3), 4.0 MB. SHA-256: bdb102b4e08c7d95696931fcc83ae891c84ac9f1bdef9f3fb10bdae8851c18cc
+- Download: https://bucksley.ai/downloads/Bucksley-0.1.2.dmg
+- Current release: Bucksley 0.1.2 (build 4), 4.2 MB. SHA-256: b354716210625cfcb5a04c76fbd040bf43a3718efd4bbfefe996ba4d1ee1b58e
 - Connections: SimpleFIN Bridge (the user's own account), Plaid with the user's own developer keys, Apple Card, Apple Cash and Savings through Apple FinanceKit on iPhone, and CSV import from other finance apps. All read-only.
 - Features: net worth stacked by what it is made of, accounts, transactions (search, filter, rename, recategorize, split, notes, tags, mark reviewed), categories and groups with rules, budgets with rollover, pace and suggested amounts, recurring bills and subscriptions, Ask Bucksley, an iPhone review inbox that syncs back to the Mac, widgets and App Intents.
 - Ask Bucksley: Apple's on-device model by default; optionally the user's own Claude or OpenAI key.

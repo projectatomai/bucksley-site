@@ -3,15 +3,15 @@
     <channel>
         <title>Bucksley</title>
         <item>
-            <title>0.1.1</title>
-            <pubDate>Wed, 25 Nov 2026 15:55:38 -0500</pubDate>
+            <title>0.1.2</title>
+            <pubDate>Wed, 25 Nov 2026 18:02:43 -0500</pubDate>
             <link>https://bucksley.ai</link>
-            <sparkle:version>3</sparkle:version>
-            <sparkle:shortVersionString>0.1.1</sparkle:shortVersionString>
+            <sparkle:version>4</sparkle:version>
+            <sparkle:shortVersionString>0.1.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>Coinbase accounts with a read-only key, a Cash Flow screen with a monthly recap, flags for charges worth a look, refund matching, a smarter review order, category suggestions, group and one-month budgets, rule previews, CSV export and full backup and restore. Plus a polished Accounts screen, an Investments screen, richer Recurring and category emoji.</p>
+            <description><![CDATA[<p>Agent setup like our other apps, Merrill CMA accounts under Investments, and fixes.</p>
 ]]></description>
-            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.1.dmg" length="4006440" type="application/octet-stream" sparkle:edSignature="lSs3KK/exFCiqkv5vkoBxKKCzzGghMSYPb+qGpxwT3vZWtL5L/EM7rWlDpOU4IGROjw/ABM0pVqtk06M8Ss0Ag=="/>
+            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.2.dmg" length="4209183" type="application/octet-stream" sparkle:edSignature="Uwlh4LUz8AIyrWdxtHalmyBg2GPhYWM/iK8OQluyn7p1/JYfhQdcoNKRkxyAf97rzcEKq+yUA0Ki4prnCk/EBg=="/>
         </item>
     </channel>
 </rss>
