@@ -3,15 +3,15 @@
     <channel>
         <title>Bucksley</title>
         <item>
-            <title>0.1.2</title>
-            <pubDate>Wed, 25 Nov 2026 18:02:43 -0500</pubDate>
+            <title>0.1.3</title>
+            <pubDate>Wed, 25 Nov 2026 18:38:42 -0500</pubDate>
             <link>https://bucksley.ai</link>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>0.1.2</sparkle:shortVersionString>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>0.1.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>Agent setup like our other apps, Merrill CMA accounts under Investments, and fixes.</p>
+            <description><![CDATA[<p>Ask Bucksley now looks up your transactions and lists the ones it talks about, so you can click straight to them. Card balances are no longer mistaken for charges, credit card payments count as transfers, accounts linked later now get their earlier transactions, and transaction rows have more room.</p>
 ]]></description>
-            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.2.dmg" length="4209183" type="application/octet-stream" sparkle:edSignature="Uwlh4LUz8AIyrWdxtHalmyBg2GPhYWM/iK8OQluyn7p1/JYfhQdcoNKRkxyAf97rzcEKq+yUA0Ki4prnCk/EBg=="/>
+            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.3.dmg" length="4353663" type="application/octet-stream" sparkle:edSignature="WuwCyV8H0E1XzVze6Qh2WH/XV2+Fxutho405GbiRd2tNGYz+6eaxWQHwknwLxI2nNyVK/T6Q3YTg8ALN5R8fDw=="/>
         </item>
     </channel>
 </rss>
