@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "include": ["/analytics-consent.gif", "/downloads/*"],
+  "exclude": []
+}

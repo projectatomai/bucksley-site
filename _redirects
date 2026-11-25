@@ -1,0 +1,5 @@
+# Cloudflare Pages redirects. Host redirects (www, .si) are zone Redirect Rules, not here.
+/downloads /download/ 302
+/downloads/ /download/ 302
+/support /help/ 301
+/support/ /help/ 301

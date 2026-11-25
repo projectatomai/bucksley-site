@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Bucksley, its bank connections, Ask Bucksley, agent connections and this website handle information.">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0e17" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://bucksley.ai/privacy/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bucksley">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Privacy · Bucksley">
+  <meta property="og:description" content="How Bucksley, its bank connections, Ask Bucksley, agent connections and this website handle information.">
+  <meta property="og:url" content="https://bucksley.ai/privacy/">
+  <meta property="og:image" content="https://bucksley.ai/social-card.png?v=20261125">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bucksley. Every account, one honest picture. Personal finance for Mac and iPhone. Free and source available.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ProtomotaLab">
+  <meta name="twitter:title" content="Privacy · Bucksley">
+  <meta name="twitter:description" content="How Bucksley, its bank connections, Ask Bucksley, agent connections and this website handle information.">
+  <meta name="twitter:image" content="https://bucksley.ai/social-card.png?v=20261125">
+  <meta name="author" content="Brad Dunlap">
+  <link rel="icon" href="/favicon.png?v=20261125" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20261125">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/analytics.js" data-ga="G-PENDING" data-site="bucksley" data-host="bucksley.ai" data-privacy="/privacy/" data-footer=".footer nav" data-css="/assets/analytics.css" defer></script>
+  <title>Privacy · Bucksley</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://bucksley.ai/privacy/#webpage","url":"https://bucksley.ai/privacy/","name":"Privacy · Bucksley","description":"How Bucksley, its bank connections, Ask Bucksley, agent connections and this website handle information.","isPartOf":{"@id":"https://bucksley.ai/#website"},"inLanguage":"en-US","publisher":{"@id":"https://protomota.com/#protomota"},"about":{"@id":"https://bucksley.ai/#app"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Bucksley","item":"https://bucksley.ai/"},{"@type":"ListItem","position":2,"name":"Privacy","item":"https://bucksley.ai/privacy/"}]},{"@type":"Organization","@id":"https://protomota.com/#protomota","name":"Protomota","legalName":"Protomota, LLC","url":"https://protomota.com/","logo":"https://protomota.com/redesign/logo.png","founder":{"@id":"https://protomota.com/#brad"},"sameAs":["https://github.com/protomota","https://x.com/protomotalab","https://youtube.com/@protomota","https://newsletter.protomota.com"]}]}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="wordmark" href="/" aria-label="Bucksley home"><img src="/assets/icon.png?v=20261125" alt="" width="30" height="30">Bucksley</a>
+      <nav aria-label="Main">
+        <a class="nav-hide" href="/#features">Features</a>
+        <a class="nav-hide" href="/#connect">Connect</a>
+        <a class="nav-hide" href="/#iphone">iPhone</a>
+        <a class="nav-hide-sm" href="/mcp/">MCP setup</a>
+        <a class="nav-cta" href="/download/">Coming soon</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="shell page-head">
+      <span class="mark">privacy</span>
+      <h1>Privacy</h1>
+      <p class="lead">Bucksley is made by Protomota, LLC. Your financial data stays on your devices and in your own iCloud. There is no Bucksley server.</p>
+    </div>
+    <div class="shell doc single">
+      <div class="prose">
+        <section>
+          <h2>The app</h2>
+          <p>Bucksley stores your workspace (accounts, balances, transactions, categories, rules, budgets, notes and tags) on your device. It has no account and no server, and sends none of your financial data to Protomota.</p>
+          <p>Bucksley is read-only. It reads balances and transactions and cannot make payments, transfers or any other change at your bank.</p>
+        </section>
+        <section id="connections">
+          <h2>Bank connections</h2>
+          <p>Bucksley connects to financial institutions only through services you set up yourself. With SimpleFIN Bridge or Plaid, your device fetches balances and transactions directly from that service under your own account and keys; their privacy terms apply to what they hold. Bucksley never sees your bank password. On iPhone, Apple Card, Apple Cash and Savings are read through Apple’s FinanceKit only with your permission. CSV files you import are read on your device.</p>
+          <p>Connection secrets (such as a SimpleFIN access URL or Plaid access token) and your Plaid keys are kept in the Keychain, never in the synced workspace.</p>
+        </section>
+        <section>
+          <h2>iCloud sync</h2>
+          <p>To keep your Mac and iPhone in step, Bucksley syncs your workspace through your own private iCloud database. Only you can read it. Apple’s iCloud terms apply. Keychain items sync only if you use iCloud Keychain.</p>
+        </section>
+        <section id="ask">
+          <h2>Ask Bucksley</h2>
+          <p>By default, Ask Bucksley uses Apple’s on-device model, so your questions and the data used to answer them stay on your device. If you add your own Claude or OpenAI key, your question and the relevant transactions are sent to that provider to answer it, under your account and their privacy terms. Your key is kept in the Keychain.</p>
+        </section>
+        <section id="mcp">
+          <h2>Local agent connections</h2>
+          <p>The MCP server runs on your Mac when an agent starts it, and works on the same local workspace. Agents can only read until you turn on Let agents make changes, and every change an agent makes is logged in Settings → Agents. Keys are never passed to agents.</p>
+          <p>Your chosen agent may send information it retrieves to its AI provider. Review that provider’s privacy terms before connecting.</p>
+        </section>
+        <section>
+          <h2>Website and support</h2>
+          <p>The site provides information about Bucksley. Hosting providers may process request information to deliver the site. If you contact us, we use the details you send to respond.</p>
+          <p>If you click Allow analytics, the site loads Google Analytics, which sets cookies to count visits, page views and link clicks. Page addresses are sent without query strings, and advertising features are off. If you decline, Google Analytics does not load. Change your choice any time with Analytics settings in the footer.</p>
+          <p><a href="https://protomota.com/apps?app=bucksley#feedback">Send Feedback</a> · <a href="mailto:hello@bucksley.ai">hello@bucksley.ai</a></p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="shell footer">
+      <a class="product-credit" href="https://protomota.com/" target="_blank" rel="noopener noreferrer"><img src="/assets/protomota-logo.png" width="22" height="22" alt=""><span>A Protomota Product</span></a>
+      <nav aria-label="Footer"><a href="/download/">Coming soon</a><a href="/mcp/">MCP setup</a><a href="/help/">Support</a><a href="/privacy/">Privacy</a><a href="https://newsletter.protomota.com/">Newsletter</a><a href="https://x.com/ProtomotaLab">Follow on X</a><a href="https://buymeacoffee.com/protomotalab">Buy me a coffee</a><a href="https://protomota.com/apps?app=bucksley#feedback">Send Feedback</a></nav>
+    </div>
+    <div class="shell footer-credit">
+      <span>&copy; <span data-pm-year>2026</span> Protomota</span>
+    </div>
+  </footer>
+  <script src="/assets/pm-year.js" defer></script>
+</body>
+</html>

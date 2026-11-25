@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Bucksley’s built-in MCP server lets Claude Code, Codex and Claude chat answer questions about your money, review transactions and write rules.">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0e17" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://bucksley.ai/mcp/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bucksley">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="MCP setup · Bucksley">
+  <meta property="og:description" content="How Bucksley’s built-in MCP server lets Claude Code, Codex and Claude chat answer questions about your money, review transactions and write rules.">
+  <meta property="og:url" content="https://bucksley.ai/mcp/">
+  <meta property="og:image" content="https://bucksley.ai/social-card.png?v=20261125">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bucksley. Every account, one honest picture. Personal finance for Mac and iPhone. Free and source available.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ProtomotaLab">
+  <meta name="twitter:title" content="MCP setup · Bucksley">
+  <meta name="twitter:description" content="How Bucksley’s built-in MCP server lets Claude Code, Codex and Claude chat answer questions about your money, review transactions and write rules.">
+  <meta name="twitter:image" content="https://bucksley.ai/social-card.png?v=20261125">
+  <meta name="author" content="Brad Dunlap">
+  <link rel="icon" href="/favicon.png?v=20261125" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20261125">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/analytics.js" data-ga="G-PENDING" data-site="bucksley" data-host="bucksley.ai" data-privacy="/privacy/" data-footer=".footer nav" data-css="/assets/analytics.css" defer></script>
+  <title>MCP setup · Bucksley</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://bucksley.ai/mcp/#webpage","url":"https://bucksley.ai/mcp/","name":"MCP setup · Bucksley","description":"How Bucksley’s built-in MCP server lets Claude Code, Codex and Claude chat answer questions about your money, review transactions and write rules.","isPartOf":{"@id":"https://bucksley.ai/#website"},"inLanguage":"en-US","publisher":{"@id":"https://protomota.com/#protomota"},"about":{"@id":"https://bucksley.ai/#app"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Bucksley","item":"https://bucksley.ai/"},{"@type":"ListItem","position":2,"name":"MCP setup","item":"https://bucksley.ai/mcp/"}]},{"@type":"SoftwareApplication","@id":"https://bucksley.ai/#app","name":"Bucksley","url":"https://bucksley.ai/","description":"Bucksley is a free, local-first personal finance app for Mac and iPhone. It brings your bank accounts, cards and investments into one place to track spending, budgets, recurring bills and net worth. It is read-only, never moves money, and keeps your data on your devices and in your own iCloud, with no Bucksley server. Coming soon, free and source available.","applicationCategory":"FinanceApplication","applicationSubCategory":"Personal finance and budgeting","operatingSystem":"macOS 15 or later, iOS 18 or later","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/PreOrder"},"image":"https://bucksley.ai/assets/icon.png?v=20261125","featureList":["Net worth, accounts and transactions in one place","Bank connections through SimpleFIN Bridge or your own Plaid keys","Apple Card, Apple Cash and Savings on iPhone through FinanceKit","CSV import from other finance apps","Categories, groups and rules","Budgets with rollover and pace","Recurring bills and subscriptions","Ask Bucksley, with Apple's on-device model by default","iPhone review inbox synced through your private iCloud","Read-only: never moves money","Built-in MCP server with 18 tools for Claude Code, Codex and Claude chat"],"author":{"@id":"https://protomota.com/#brad"},"publisher":{"@id":"https://protomota.com/#protomota"},"sameAs":["https://protomota.com/apps"]},{"@type":"Organization","@id":"https://protomota.com/#protomota","name":"Protomota","legalName":"Protomota, LLC","url":"https://protomota.com/","logo":"https://protomota.com/redesign/logo.png","founder":{"@id":"https://protomota.com/#brad"},"sameAs":["https://github.com/protomota","https://x.com/protomotalab","https://youtube.com/@protomota","https://newsletter.protomota.com"]},{"@type":"Person","@id":"https://protomota.com/#brad","name":"Brad Dunlap","url":"https://protomota.com/about","sameAs":["https://www.linkedin.com/in/bradley-dunlap/","https://github.com/protomota"]}]}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="wordmark" href="/" aria-label="Bucksley home"><img src="/assets/icon.png?v=20261125" alt="" width="30" height="30">Bucksley</a>
+      <nav aria-label="Main">
+        <a class="nav-hide" href="/#features">Features</a>
+        <a class="nav-hide" href="/#connect">Connect</a>
+        <a class="nav-hide" href="/#iphone">iPhone</a>
+        <a class="nav-hide-sm" href="/mcp/" aria-current="page">MCP setup</a>
+        <a class="nav-cta" href="/download/">Coming soon</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="shell page-head">
+      <span class="mark">mcp setup</span>
+      <h1>Connect an agent to Bucksley.</h1>
+      <p class="lead">Bucksley’s MCP server runs on your Mac, on the same data as the app. Here’s how it will connect and what your agent can do. It works once the Mac app ships.</p>
+    </div>
+    <div class="shell doc">
+      <nav class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#how">How it works</a>
+        <a href="#claude-code">Claude Code</a>
+        <a href="#codex">Codex</a>
+        <a href="#claude-chat">Claude chat</a>
+        <a href="#tools">Tools</a>
+        <a href="#try">Try it</a>
+      </nav>
+      <div class="prose">
+        <section id="how">
+          <h2>How it works</h2>
+          <p>The Bucksley app runs as an MCP server when your agent starts it with <code>--mcp</code>. It talks over standard input and output, on your Mac only, and works on the same local workspace the app shows. Changes appear in the app right away and are listed under <strong>Settings → Agents</strong>.</p>
+          <p class="note"><strong>You stay in control.</strong> Agents can only read until you turn on <strong>Let agents make changes</strong> in Settings → Agents, and every change they make is logged in the app. Bank secrets and AI keys stay in the Keychain and are never passed to an agent as tool arguments. Bucksley is read-only with your banks, so no tool can move money.</p>
+        </section>
+        <section id="claude-code">
+          <h2>Claude Code</h2>
+          <p>Add Bucksley as a local server for your user or project:</p>
+          <p class="prompt">claude mcp add bucksley -- /Applications/Bucksley.app/Contents/MacOS/Bucksley --mcp</p>
+        </section>
+        <section id="codex">
+          <h2>Codex</h2>
+          <p>Add this to <code>~/.codex/config.toml</code>:</p>
+          <p class="prompt">[mcp_servers.bucksley]<br>command = "/Applications/Bucksley.app/Contents/MacOS/Bucksley"<br>args = ["--mcp"]</p>
+        </section>
+        <section id="claude-chat">
+          <h2>Claude chat</h2>
+          <p>In the Claude desktop app, open <strong>Settings → Developer → Edit Config</strong> and add a <code>bucksley</code> entry under <code>mcpServers</code> with the same command and the <code>--mcp</code> argument. Restart Claude.</p>
+        </section>
+        <section id="tools">
+          <h2>Tools</h2>
+          <p>Ten tools read. Eight make changes, and stay off until you allow them.</p>
+          <div class="table-wrap">
+            <table class="tide-table">
+              <thead><tr><th>Tool</th><th>What it does</th></tr></thead>
+              <tbody>
+              <tr><td><code>get_status</code></td><td>Which connections are set up, how many accounts and transactions there are, and when each last synced.</td></tr>
+              <tr><td><code>list_accounts · get_net_worth</code></td><td>Accounts with balances, and net worth over time by what it is made of.</td></tr>
+              <tr><td><code>list_transactions</code></td><td>Search and filter transactions by date, account, category, amount, tag or review state.</td></tr>
+              <tr><td><code>get_spending</code></td><td>Spending by category or group for any period.</td></tr>
+              <tr><td><code>list_categories · list_rules</code></td><td>Your categories, groups and the rules that file transactions.</td></tr>
+              <tr><td><code>list_budgets · list_recurring</code></td><td>Budgets with spent, left and pace, and recurring bills and subscriptions.</td></tr>
+              <tr><td><code>get_review_queue</code></td><td>Transactions waiting for review.</td></tr>
+              <tr><td><code>mark_reviewed · set_category · set_note · rename_transaction · set_tags</code></td><td>Tidy up transactions. Off until you allow changes.</td></tr>
+              <tr><td><code>create_rule · set_budget</code></td><td>Add a categorization rule or set a budget. Off until you allow changes.</td></tr>
+              <tr><td><code>sync_now</code></td><td>Fetch new transactions from your connections now. Off until you allow changes.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="try">
+          <h2>Try it</h2>
+          <p class="prompt">What did I spend on dining this month, and how does that compare with last month?</p>
+          <p class="prompt">Go through my review queue, fix any obvious categories and make rules for the merchants you fixed.</p>
+          <p class="prompt">Which subscriptions went up this year, and what do they cost me in total?</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="shell footer">
+      <a class="product-credit" href="https://protomota.com/" target="_blank" rel="noopener noreferrer"><img src="/assets/protomota-logo.png" width="22" height="22" alt=""><span>A Protomota Product</span></a>
+      <nav aria-label="Footer"><a href="/download/">Coming soon</a><a href="/mcp/">MCP setup</a><a href="/help/">Support</a><a href="/privacy/">Privacy</a><a href="https://newsletter.protomota.com/">Newsletter</a><a href="https://x.com/ProtomotaLab">Follow on X</a><a href="https://buymeacoffee.com/protomotalab">Buy me a coffee</a><a href="https://protomota.com/apps?app=bucksley#feedback">Send Feedback</a></nav>
+    </div>
+    <div class="shell footer-credit">
+      <span>&copy; <span data-pm-year>2026</span> Protomota</span>
+    </div>
+  </footer>
+  <script src="/assets/pm-year.js" defer></script>
+</body>
+</html>

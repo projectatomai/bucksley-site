@@ -1,0 +1,4 @@
+.DS_Store
+dist/
+# Installers are served from the R2 bucket bucksley-downloads; release-mac.sh stages them here.
+downloads/
