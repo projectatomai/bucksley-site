@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Bucksley</title>
+        <item>
+            <title>0.1.0</title>
+            <pubDate>Wed, 25 Nov 2026 12:49:57 -0500</pubDate>
+            <link>https://bucksley.ai</link>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<p>First release of Bucksley, a read-only finance app for Mac and iPhone.</p>
+]]></description>
+            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.0.dmg" length="3365422" type="application/octet-stream" sparkle:edSignature="2auA4MxRK7ozD2wg0W0uIYC13MZDARCnrJaLbSILIzeXKjawEAFxOzyG5Ny2aFaJ9Ue1SoZjUxwvZ35cg+zJAA=="/>
+        </item>
+    </channel>
+</rss>

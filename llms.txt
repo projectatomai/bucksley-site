@@ -1,6 +1,6 @@
 # Bucksley
 
-> Bucksley is a free, local-first personal finance app for Mac and iPhone, made by Protomota. It brings bank accounts, cards and investments into one place to track spending, budgets, recurring bills and net worth. It is read-only and never moves money. Data stays on the user's devices and in their own private iCloud; there is no Bucksley server and no account. A built-in MCP server lets AI agents such as Claude Code, Codex and Claude chat work with it. Bucksley is in development and coming soon for Mac and iPhone.
+> Bucksley is a free, local-first personal finance app for Mac and iPhone, made by Protomota. It brings bank accounts, cards and investments into one place to track spending, budgets, recurring bills and net worth. It is read-only and never moves money. Data stays on the user's devices and in their own private iCloud; there is no Bucksley server and no account. A built-in MCP server lets AI agents such as Claude Code, Codex and Claude chat work with it. Bucksley for Mac is available. The iPhone app is coming soon.
 
 Bucksley's website is https://bucksley.ai. Other products with similar names are not related to it.
 
@@ -9,8 +9,10 @@ Key facts:
 - Maker: Protomota (Protomota, LLC), the independent studio of Brad Dunlap. https://protomota.com
 - Price: free. Every feature is included.
 - License: free and source available.
-- Platform: Mac (macOS 15 or later) and iPhone (iOS 18 or later). Both are in development and not available yet.
-- Status: coming soon. There is no download yet and it is not on the App Store.
+- Platform: Mac, macOS 15 or later. The iPhone app (iOS 18 or later) is coming soon and is not on the App Store yet.
+- Install: a signed and notarized disk image from https://bucksley.ai/download/ with signed automatic updates (Sparkle).
+- Download: https://bucksley.ai/downloads/Bucksley-0.1.0.dmg
+- Current release: Bucksley 0.1.0 (build 2), 3.4 MB. SHA-256: fad3651b18211af0d1a505ed35fd23a519b1da1d42852a5855f50c8569b59624
 - Connections: SimpleFIN Bridge (the user's own account), Plaid with the user's own developer keys, Apple Card, Apple Cash and Savings through Apple FinanceKit on iPhone, and CSV import from other finance apps. All read-only.
 - Features: net worth stacked by what it is made of, accounts, transactions (search, filter, rename, recategorize, split, notes, tags, mark reviewed), categories and groups with rules, budgets with rollover, pace and suggested amounts, recurring bills and subscriptions, Ask Bucksley, an iPhone review inbox that syncs back to the Mac, widgets and App Intents.
 - Ask Bucksley: Apple's on-device model by default; optionally the user's own Claude or OpenAI key.
@@ -20,7 +22,7 @@ Key facts:
 ## Pages
 
 - [Bucksley](https://bucksley.ai/): what it does, the working preview, connections, the iPhone app, agents and privacy
-- [Coming soon](https://bucksley.ai/download/): what the first release includes and what you will need
+- [Download and install](https://bucksley.ai/download/): the Mac installer, install steps and the SHA-256 checksum
 - [MCP setup](https://bucksley.ai/mcp/): connecting Claude Code, Codex and Claude chat, and the tool list
 - [Help](https://bucksley.ai/help/): common questions
 - [Privacy](https://bucksley.ai/privacy/): how the app, bank connections, Ask Bucksley, agent connections and the website handle information
