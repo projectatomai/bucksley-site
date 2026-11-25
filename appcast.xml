@@ -3,15 +3,15 @@
     <channel>
         <title>Bucksley</title>
         <item>
-            <title>0.1.0</title>
-            <pubDate>Wed, 25 Nov 2026 12:49:57 -0500</pubDate>
+            <title>0.1.1</title>
+            <pubDate>Wed, 25 Nov 2026 15:55:38 -0500</pubDate>
             <link>https://bucksley.ai</link>
-            <sparkle:version>2</sparkle:version>
-            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>0.1.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>First release of Bucksley, a read-only finance app for Mac and iPhone.</p>
+            <description><![CDATA[<p>Coinbase accounts with a read-only key, a Cash Flow screen with a monthly recap, flags for charges worth a look, refund matching, a smarter review order, category suggestions, group and one-month budgets, rule previews, CSV export and full backup and restore. Plus a polished Accounts screen, an Investments screen, richer Recurring and category emoji.</p>
 ]]></description>
-            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.0.dmg" length="3365422" type="application/octet-stream" sparkle:edSignature="2auA4MxRK7ozD2wg0W0uIYC13MZDARCnrJaLbSILIzeXKjawEAFxOzyG5Ny2aFaJ9Ue1SoZjUxwvZ35cg+zJAA=="/>
+            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.1.dmg" length="4006440" type="application/octet-stream" sparkle:edSignature="lSs3KK/exFCiqkv5vkoBxKKCzzGghMSYPb+qGpxwT3vZWtL5L/EM7rWlDpOU4IGROjw/ABM0pVqtk06M8Ss0Ag=="/>
         </item>
     </channel>
 </rss>
