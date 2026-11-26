@@ -82,7 +82,6 @@ ICON_CHART = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke
 ICON_BELL = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>'
 ICON_PLUG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M15 8V2"/><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"/><path d="M9 8V2"/></svg>'
 ICON_BOOK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>'
-ICON_COFFEE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h12v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Zm12 2h2a3 3 0 0 1 0 6h-2M3 22h15M7 5V2M12 5V2"/></svg>'
 ICON_CHAT = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></svg>'
 ICON_HOME = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>'
 ICON_HELP = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>'
@@ -91,7 +90,7 @@ NEWSLETTER = "https://newsletter.protomota.com/"
 NAV = [("/#features", "Features", "nav-hide"), ("/#connect", "Connect", "nav-hide"), ("/#iphone", "iPhone", "nav-hide"), ("/mcp/", "MCP setup", "nav-hide-sm")]
 FOOT_NAV = [("/download/", "Download" if LIVE else "Coming soon"), ("/mcp/", "MCP setup"), ("/help/", "Support"), ("/privacy/", "Privacy"),
             ("https://newsletter.protomota.com/", "Newsletter"), ("https://x.com/ProtomotaLab", "Follow on X"),
-            ("https://buymeacoffee.com/protomotalab", "Buy me a coffee"), ("https://protomota.com/apps?app=bucksley#feedback", "Send Feedback")]
+            ("https://protomota.com/apps?app=bucksley#feedback", "Send Feedback")]
 
 
 def ld(graph):
@@ -598,16 +597,10 @@ def download():
         <p class="lead">Every account, one honest picture. Every feature is free.</p>
       </div>
       <section class="download-support" aria-labelledby="download-support-title">
-        <span class="support-icon" aria-hidden="true">{ICON_COFFEE}</span>
-        <h2 id="download-support-title">Free software. <span>Supported by people.</span></h2>
-        <p class="support-copy">Every Bucksley feature is free. If it saves you a subscription, a tip helps support development and future updates.</p>
-        <a class="button secondary" href="https://buymeacoffee.com/protomotalab" target="_blank" rel="noopener noreferrer">{ICON_COFFEE}Buy me a coffee <span aria-hidden="true">↗</span></a>
-        <p class="support-note">Tips are entirely optional. Bucksley remains free.</p>
-        <section class="feedback-section" aria-labelledby="feedback-title">
-          <h3 id="feedback-title">Bucksley feedback</h3>
-          <p>Report a bug, suggest a bank or a feature, or tell us how Bucksley is working for you.</p>
-          <a class="button secondary" href="https://protomota.com/apps?app=bucksley#feedback">{ICON_CHAT}Send Feedback <span aria-hidden="true">↗</span></a>
-        </section>
+        <span class="support-icon" aria-hidden="true">{ICON_CHAT}</span>
+        <h2 id="download-support-title">Free software. <span>Shaped by people.</span></h2>
+        <p class="support-copy">Every Bucksley feature is free, with nothing to unlock. Report a bug, suggest a bank or a feature, or tell us how Bucksley is working for you.</p>
+        <a class="button secondary" href="https://protomota.com/apps?app=bucksley#feedback">{ICON_CHAT}Send Feedback <span aria-hidden="true">↗</span></a>
       </section>
       <div class="download-get">
         <a class="button download-button mac-download" href="{DMG}" download>{big_apple}<span>Download Bucksley {rel("version")}</span></a>
@@ -719,7 +712,7 @@ def faq():
            if LIVE else ("When can I get it?", "Bucksley is in development for Mac and iPhone. Join the Protomota newsletter or Discord to hear when the first release ships."))
     items = [("What is Bucksley?", "Bucksley is a free personal finance app for Mac and iPhone, made by Protomota. It brings your bank accounts, cards and investments into one place to track spending, budgets, recurring bills and net worth. It is read-only and has no server: your data stays on your devices and in your own iCloud."),
              get,
-             ("Is it free?", "Yes. Bucksley is free and source available, with no account, no trial and nothing to unlock." + (" Tips are optional." if LIVE else "")),
+             ("Is it free?", "Yes. Bucksley is free and source available, with no account, no trial and nothing to unlock."),
              ("How does it connect to my bank?", "Through services you sign up for yourself: SimpleFIN Bridge, or Plaid with your own developer keys. On iPhone it can also read Apple Card, Apple Cash and Savings through Apple’s FinanceKit. You can also import a CSV export from another finance app."),
              ("Can Bucksley move my money?", "No. Bucksley only reads balances and transactions. It cannot make payments or transfers, and it never asks for your bank password."),
              ("Where is my data kept?", "On your devices, and in your own private iCloud database so your Mac and iPhone stay in sync. Bucksley has no server. Connection secrets and AI keys are kept in the Keychain."),
