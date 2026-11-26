@@ -49,7 +49,7 @@ def rel(key):
     return f'<{tag} data-release="{key}">{REL[key]}</{tag}>'
 
 
-STATUS = "Free and source available." if LIVE else "Coming soon, free and source available."
+STATUS = "Free and open source." if LIVE else "Coming soon, free and open source."
 DESC = ("Bucksley is a free, local-first personal finance app for Mac and iPhone. It brings your bank accounts, cards "
         "and investments into one place to track spending, budgets, recurring bills and net worth. It is read-only, "
         "never moves money, and keeps your data on your devices and in your own iCloud, with no Bucksley server. " + STATUS)
@@ -116,7 +116,7 @@ def head(path, title, desc, graph, noindex=False, home=False):
             f'  <meta property="og:url" content="{url}">', f'  <meta property="og:image" content="{SITE}/social-card.png?v={V}">',
             '  <meta property="og:image:type" content="image/png">',
             '  <meta property="og:image:width" content="1200">', '  <meta property="og:image:height" content="630">',
-            '  <meta property="og:image:alt" content="Bucksley. Every account, one honest picture. Personal finance for Mac and iPhone. Free and source available.">',
+            '  <meta property="og:image:alt" content="Bucksley. Every account, one honest picture. Personal finance for Mac and iPhone. Free and open source.">',
             '  <meta name="twitter:card" content="summary_large_image">', '  <meta name="twitter:site" content="@ProtomotaLab">',
             f'  <meta name="twitter:title" content="{title}">', f'  <meta name="twitter:description" content="{desc}">',
             f'  <meta name="twitter:image" content="{SITE}/social-card.png?v={V}">',
@@ -329,13 +329,13 @@ def index():
              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
              '<path d="M12 3v12"/><path d="m7.5 7.5 4.5-4.5 4.5 4.5"/><path d="M5 12v6.5A2.5 2.5 0 0 0 7.5 21h9a2.5 2.5 0 0 0 2.5-2.5V12"/></svg><span data-pm-share-label>Share</span></button>')
     if LIVE:
-        pill = "Mac app · Free · Source available"
+        pill = "Mac app · Free · Open source"
         primary = f'<a class="button mac-download" href="/download/">{APPLE} Download for Mac</a>'
-        fine = f'Free · Source available · macOS 15 or later · Version {rel("version")} · iPhone app coming soon'
+        fine = f'Free · Open source · macOS 15 or later · Version {rel("version")} · iPhone app coming soon'
     else:
         pill = "Mac and iPhone · Free · Coming soon"
         primary = f'<a class="button" href="{NEWSLETTER}" target="_blank" rel="noopener noreferrer">{ICON_BELL}Get launch news</a>'
-        fine = "Free · Source available · macOS 15 and iOS 18 or later · In development"
+        fine = "Free · Open source · macOS 15 and iOS 18 or later · In development"
     h = head("/", TITLE, DESC, graph, home=True) + header()
     h += f'''
   <main id="main">
@@ -356,7 +356,7 @@ def index():
           <div><dt>0</dt><dd>Bucksley servers. Your finances stay on your devices</dd></div>
           <div><dt>4</dt><dd>ways in: SimpleFIN, your own Plaid keys, Apple Wallet and CSV</dd></div>
           <div><dt>18</dt><dd>MCP tools for the agent you connect</dd></div>
-          <div><dt>$0</dt><dd>free and source available</dd></div>
+          <div><dt>$0</dt><dd>free and open source</dd></div>
         </dl>
       </div>
     </section>
@@ -509,7 +509,7 @@ def index():
     <section class="section closing" aria-labelledby="closing-title">
       <div class="shell">
         <span class="mark">coming soon</span>
-        <h2 id="closing-title">Free and <em>source available.</em></h2>
+        <h2 id="closing-title">Free and <em>open source.</em></h2>
         <p class="lead">Bucksley is in development for Mac and iPhone. Join the Protomota newsletter or our Discord to hear the day it ships.</p>
         <div class="actions actions-left">
           <a class="button" href="{NEWSLETTER}" target="_blank" rel="noopener noreferrer">{ICON_BELL}Get launch news</a>
@@ -716,7 +716,7 @@ def faq():
            if LIVE else ("When can I get it?", "Bucksley is in development for Mac and iPhone. Join the Protomota newsletter or Discord to hear when the first release ships."))
     items = [("What is Bucksley?", "Bucksley is a free personal finance app for Mac and iPhone, made by Protomota. It brings your bank accounts, cards and investments into one place to track spending, budgets, recurring bills and net worth. It is read-only and has no server: your data stays on your devices and in your own iCloud."),
              get,
-             ("Is it free?", "Yes. Bucksley is free and source available, with no account, no trial and nothing to unlock."),
+             ("Is it free?", "Yes. Bucksley is free and open source, with no account, no trial and nothing to unlock."),
              ("How does it connect to my bank?", "Through services you sign up for yourself: SimpleFIN Bridge, or Plaid with your own developer keys. On iPhone it can also read Apple Card, Apple Cash and Savings through Apple’s FinanceKit. You can also import a CSV export from another finance app."),
              ("Can Bucksley move my money?", "No. Bucksley only reads balances and transactions. It cannot make payments or transfers, and it never asks for your bank password."),
              ("Where is my data kept?", "On your devices, and in your own private iCloud database so your Mac and iPhone stay in sync. Bucksley has no server. Connection secrets and AI keys are kept in the Keychain."),
@@ -852,7 +852,7 @@ Key facts:
 
 - Maker: Protomota (Protomota, LLC), the independent studio of Brad Dunlap. https://protomota.com
 - Price: free. Every feature is included.
-- License: free and source available.
+- License: free and open source (MIT).
 {platform}
 {install}
 - Connections: SimpleFIN Bridge (the user's own account), Plaid with the user's own developer keys, Apple Card, Apple Cash and Savings through Apple FinanceKit on iPhone, and CSV import from other finance apps. All read-only.
@@ -872,7 +872,7 @@ Key facts:
 ## Common questions
 
 - What is Bucksley? A free, read-only personal finance app for Mac and iPhone with no Bucksley server.
-- Is Bucksley free? Yes. It is free and source available, with no account, no trial and nothing to unlock.
+- Is Bucksley free? Yes. It is free and open source, with no account, no trial and nothing to unlock.
 - Can it move money? No. It only reads balances and transactions.
 - How does it connect to banks? SimpleFIN Bridge or the user's own Plaid keys, Apple FinanceKit on iPhone, or CSV import.
 - Which agents work with Bucksley? Claude Code, Codex and Claude chat, through its local MCP server.
