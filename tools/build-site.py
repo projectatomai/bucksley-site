@@ -85,12 +85,13 @@ ICON_BOOK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke=
 ICON_CHAT = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></svg>'
 ICON_HOME = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>'
 ICON_HELP = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>'
+ICON_ACTION = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg>'
 NEWSLETTER = "https://newsletter.protomota.com/"
 
 NAV = [("/#features", "Features", "nav-hide"), ("/#connect", "Connect", "nav-hide"), ("/#iphone", "iPhone", "nav-hide"), ("/mcp/", "MCP setup", "nav-hide-sm")]
 FOOT_NAV = [("/download/", "Download" if LIVE else "Coming soon"), ("/mcp/", "MCP setup"), ("/help/", "Support"), ("/privacy/", "Privacy"),
             ("https://newsletter.protomota.com/", "Newsletter"), ("https://x.com/ProtomotaLab", "Follow on X"),
-            ("https://protomota.com/apps?app=bucksley#feedback", "Send Feedback")]
+            ("https://protomota.com/action", "Take action"), ("https://protomota.com/apps?app=bucksley#feedback", "Send Feedback")]
 
 
 def ld(graph):
@@ -600,7 +601,10 @@ def download():
         <span class="support-icon" aria-hidden="true">{ICON_CHAT}</span>
         <h2 id="download-support-title">Free software. <span>Shaped by people.</span></h2>
         <p class="support-copy">Every Bucksley feature is free, with nothing to unlock. Report a bug, suggest a bank or a feature, or tell us how Bucksley is working for you.</p>
-        <a class="button secondary" href="https://protomota.com/apps?app=bucksley#feedback">{ICON_CHAT}Send Feedback <span aria-hidden="true">↗</span></a>
+        <div class="support-actions">
+          <a class="button secondary" href="https://protomota.com/apps?app=bucksley#feedback">{ICON_CHAT}Send Feedback <span aria-hidden="true">↗</span></a>
+          <a class="take-action" href="https://protomota.com/action">{ICON_ACTION}Take action <span aria-hidden="true">↗</span></a>
+        </div>
       </section>
       <div class="download-get">
         <a class="button download-button mac-download" href="{DMG}" download>{big_apple}<span>Download Bucksley {rel("version")}</span></a>
