@@ -3,15 +3,15 @@
     <channel>
         <title>Bucksley</title>
         <item>
-            <title>0.1.8</title>
-            <pubDate>Wed, 25 Nov 2026 22:07:42 -0500</pubDate>
+            <title>0.1.9</title>
+            <pubDate>Wed, 25 Nov 2026 22:27:10 -0500</pubDate>
             <link>https://bucksley.ai</link>
-            <sparkle:version>9</sparkle:version>
-            <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
+            <sparkle:version>10</sparkle:version>
+            <sparkle:shortVersionString>0.1.9</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>Pick who answers Ask right on the Agents screen. Connecting an agent and choosing who answers inside Bucksley are now side by side.</p>
+            <description><![CDATA[<p>Smart budgets now follow how you spend lately. Fixed bills like rent, insurance, utilities, health and gas are budgeted at what you actually spend and never cut. Flexible categories start a little under your recent spending, and you can mark any category fixed or flexible.</p>
 ]]></description>
-            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.8.dmg" length="4746107" type="application/octet-stream" sparkle:edSignature="OJBYsltFs3cdHSONBGfMlpFaOEGUjz/w139/9LubCFcFO8U/cGyculEZcsZuMwJ8dWJWzBXonPodtvqCQBrLDA=="/>
+            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.9.dmg" length="4750245" type="application/octet-stream" sparkle:edSignature="/thoNR+RJq7I2WMgX3xlMFJNVfujCufibfW6DUjC5zCXvJrV6D3JX3veKLT6VDsoEVfkKKCMyst6Q5fMT+pGBA=="/>
         </item>
     </channel>
 </rss>
