@@ -3,15 +3,15 @@
     <channel>
         <title>Bucksley</title>
         <item>
-            <title>0.1.4</title>
-            <pubDate>Wed, 25 Nov 2026 18:50:41 -0500</pubDate>
+            <title>0.1.5</title>
+            <pubDate>Wed, 25 Nov 2026 20:17:10 -0500</pubDate>
             <link>https://bucksley.ai</link>
-            <sparkle:version>6</sparkle:version>
-            <sparkle:shortVersionString>0.1.4</sparkle:shortVersionString>
+            <sparkle:version>7</sparkle:version>
+            <sparkle:shortVersionString>0.1.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>Smart budgets: Bucksley builds a budget for every category you spend in from your income and spending, leaves room for a savings goal, and walks you through it in four steps. Ask Bucksley now coaches you on budgets and can set them up in one step. When Claude or OpenAI answers, the Ask screen says Ask My Agent.</p>
+            <description><![CDATA[<p>Ask can now answer with your own agent. Choose Claude Code or Codex, signed in on your Mac, in Settings, pick the model, and confirm what it can read. Ask Bucksley stays on Apple Intelligence on your Mac until you choose. Your data moves to its new home on first launch.</p>
 ]]></description>
-            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.4.dmg" length="4519420" type="application/octet-stream" sparkle:edSignature="At6aJTqam1NoS3mxh7tFkbRm7GmrexBKRhTJSZnhgdzQ9i2T5Dv4yMoZ0aRMAC8Q0XgH1pkhcuLi7qEVZtYvBA=="/>
+            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.5.dmg" length="4597466" type="application/octet-stream" sparkle:edSignature="5oD4A2TK9/op/6i627G5WxK3AUMwbD/UU+U/WgfwY7BfloiYbtZDUGfu3TUL5Ij79ELmBtjuOu7rhpniWh6vDA=="/>
         </item>
     </channel>
 </rss>
