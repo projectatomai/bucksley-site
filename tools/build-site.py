@@ -136,14 +136,15 @@ def head(path, title, desc, graph, noindex=False, home=False):
 
 
 def header(current=None, body_class=None):
-    links = "\n".join(f'        <a class="{c}" href="{h}"{" aria-current=\"page\"" if h == current else ""}>{t}</a>' for h, t, c in NAV)
+    current_attr = ' aria-current="page"'
+    links = "\n".join(f'        <a class="{c}" href="{h}"{current_attr if h == current else ""}>{t}</a>' for h, t, c in NAV)
     if LIVE and current == "/download/":
         cta = f'<a class="nav-cta" href="#install">{ICON_BOOK}Install guide</a>'
         links = ""
     elif LIVE:
         cta = f'<a class="nav-cta mac-download" href="/download/">{APPLE} Download for Mac</a>'
     else:
-        cta = f'<a class="nav-cta" href="/download/"{" aria-current=\"page\"" if current == "/download/" else ""}>Coming soon</a>'
+        cta = f'<a class="nav-cta" href="/download/"{current_attr if current == "/download/" else ""}>Coming soon</a>'
     body = f'<body class="{body_class}">' if body_class else "<body>"
     return f'''{body}
   <a class="skip" href="#main">Skip to content</a>
