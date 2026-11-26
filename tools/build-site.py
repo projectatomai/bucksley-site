@@ -91,7 +91,7 @@ NEWSLETTER = "https://newsletter.protomota.com/"
 NAV = [("/#features", "Features", "nav-hide"), ("/#connect", "Connect", "nav-hide"), ("/#iphone", "iPhone", "nav-hide"), ("/mcp/", "MCP setup", "nav-hide-sm")]
 FOOT_NAV = [("/download/", "Download" if LIVE else "Coming soon"), ("/mcp/", "MCP setup"), ("/help/", "Support"), ("/privacy/", "Privacy"),
             ("https://newsletter.protomota.com/", "Newsletter"), ("https://x.com/ProtomotaLab", "Follow on X"),
-            ("https://protomota.com/action", "Take action"), ("https://protomota.com/apps?app=bucksley#feedback", "Send Feedback")]
+            ("https://projectatom.ai/", "Project ATOM"), ("https://protomota.com/apps?app=bucksley#feedback", "Send Feedback")]
 
 
 def ld(graph):
@@ -128,6 +128,7 @@ def head(path, title, desc, graph, noindex=False, home=False):
     meta += [f'  <link rel="icon" href="/favicon.png?v={V}" type="image/png">', f'  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v={V}">',
              '  <link rel="stylesheet" href="/assets/site.css">',
              '  <link rel="stylesheet" href="/protomota-family.css">' if home else None,
+             '  <link rel="stylesheet" href="/project-atom/project-atom-promo.css">' if home else None,
              f'  <script src="/assets/analytics.js" data-ga="{GA}" data-site="bucksley" data-host="bucksley.ai" data-privacy="/privacy/" data-footer=".footer nav" data-css="/assets/analytics.css" defer></script>',
              '  <script src="/assets/site.js" defer></script>' if home else None,
              '  <script src="/assets/protomota-share.js" defer></script>' if home else None,
@@ -603,7 +604,6 @@ def download():
         <p class="support-copy">Every Bucksley feature is free, with nothing to unlock. Report a bug, suggest a bank or a feature, or tell us how Bucksley is working for you.</p>
         <div class="support-actions">
           <a class="button secondary" href="https://protomota.com/apps?app=bucksley#feedback">{ICON_CHAT}Send Feedback <span aria-hidden="true">↗</span></a>
-          <a class="take-action" href="https://protomota.com/action">{ICON_ACTION}Take action <span aria-hidden="true">↗</span></a>
         </div>
       </section>
       <div class="download-get">
