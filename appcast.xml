@@ -3,15 +3,15 @@
     <channel>
         <title>Bucksley</title>
         <item>
-            <title>0.1.7</title>
-            <pubDate>Wed, 25 Nov 2026 21:44:01 -0500</pubDate>
+            <title>0.1.8</title>
+            <pubDate>Wed, 25 Nov 2026 22:07:42 -0500</pubDate>
             <link>https://bucksley.ai</link>
-            <sparkle:version>8</sparkle:version>
-            <sparkle:shortVersionString>0.1.7</sparkle:shortVersionString>
+            <sparkle:version>9</sparkle:version>
+            <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>Ask is named for who answers: Ask Apple Intelligence, Ask Claude, Ask Codex or Ask Gemini, with each one's mark. Gemini can answer through Antigravity, and the Ask screen offers your agent with one click after you confirm what it can read. Styled choice buttons replace the system pop-up menus, the Transactions filter row is cleaner, the My Accounts header stays pinned, and agent skill updates no longer freeze the window.</p>
+            <description><![CDATA[<p>Pick who answers Ask right on the Agents screen. Connecting an agent and choosing who answers inside Bucksley are now side by side.</p>
 ]]></description>
-            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.7.dmg" length="4742446" type="application/octet-stream" sparkle:edSignature="Io7vbVfuizwGF2a/romkhmaerDIN2FkWAJ6HgQLwPlGYLM8NTHYgVUCdO0jBM1iSkDagvtRn+aoX57pEbdvZDw=="/>
+            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.8.dmg" length="4746107" type="application/octet-stream" sparkle:edSignature="OJBYsltFs3cdHSONBGfMlpFaOEGUjz/w139/9LubCFcFO8U/cGyculEZcsZuMwJ8dWJWzBXonPodtvqCQBrLDA=="/>
         </item>
     </channel>
 </rss>
