@@ -128,7 +128,7 @@ def head(path, title, desc, graph, noindex=False, home=False):
     meta += [f'  <link rel="icon" href="/favicon.png?v={V}" type="image/png">', f'  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v={V}">',
              '  <link rel="stylesheet" href="/assets/site.css">',
              '  <link rel="stylesheet" href="/protomota-family.css">' if home else None,
-             '  <link rel="stylesheet" href="/project-atom/project-atom-promo.css">' if home else None,
+             '  <link rel="stylesheet" href="/project-atom/project-atom-promo.css?v=20261126b">' if home else None,
              f'  <script src="/assets/analytics.js" data-ga="{GA}" data-site="bucksley" data-host="bucksley.ai" data-privacy="/privacy/" data-footer=".footer nav" data-css="/assets/analytics.css" defer></script>',
              '  <script src="/assets/site.js" defer></script>' if home else None,
              '  <script src="/assets/protomota-share.js" defer></script>' if home else None,
