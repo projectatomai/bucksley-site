@@ -3,15 +3,15 @@
     <channel>
         <title>Bucksley</title>
         <item>
-            <title>0.1.10</title>
-            <pubDate>Thu, 26 Nov 2026 08:35:23 -0500</pubDate>
+            <title>0.1.11</title>
+            <pubDate>Thu, 26 Nov 2026 09:39:13 -0500</pubDate>
             <link>https://bucksley.ai</link>
-            <sparkle:version>11</sparkle:version>
-            <sparkle:shortVersionString>0.1.10</sparkle:shortVersionString>
+            <sparkle:version>12</sparkle:version>
+            <sparkle:shortVersionString>0.1.11</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>Bug fixes and improvements.</p>
+            <description><![CDATA[<p>The support card now has a Don't show again button.</p>
 ]]></description>
-            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.10.dmg" length="4746614" type="application/octet-stream" sparkle:edSignature="K4Ds1Ss+HFFbRV+roT3t61ZURaUiffNWAPXiXdpwLdnRooDB0tR/IXeCUoToDvB7H9uSVnt/pqLiT26/BzvTDQ=="/>
+            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.11.dmg" length="4750107" type="application/octet-stream" sparkle:edSignature="K6SCAVoTl3eWeNPmsGwyPD7UiUHitob0LecXWh0G5WqPS3kBpE308CuO63jzqux4E5Ag+IUYB/nHDBU2O8p3DQ=="/>
         </item>
     </channel>
 </rss>
