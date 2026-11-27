@@ -77,6 +77,9 @@ APPLE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" ari
 ICON_ARROW = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>'
 ICON_CHART = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg>'
 ICON_BELL = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>'
+TESTFLIGHT = "https://testflight.apple.com/join/F4wS5fF3"
+TF_NOTE = "iPhone and iPad companion beta. Pairs with the Mac&nbsp;app."
+TF_BUTTON = f'<a class="button secondary testflight-button" href="{TESTFLIGHT}" target="_blank" rel="noopener noreferrer">{APPLE} Join the TestFlight beta <span aria-hidden="true">↗</span></a>'
 ICON_PLUG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M15 8V2"/><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"/><path d="M9 8V2"/></svg>'
 ICON_BOOK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>'
 ICON_CHAT = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></svg>'
@@ -299,7 +302,7 @@ def phone():
               <ul class="next" data-k="next"></ul>
             </div>
           </div>
-          <figcaption>iPhone app coming soon · sample data</figcaption>
+          <figcaption>iPhone and iPad beta on TestFlight · sample data</figcaption>
         </figure>
 '''
 
@@ -327,7 +330,7 @@ def index():
     if LIVE:
         pill = "Mac app · Free · Open source"
         primary = f'<a class="button mac-download" href="/download/">{APPLE} Download for Mac</a>'
-        fine = f'Free · Open source · macOS 15 or later · Version {rel("version")} · iPhone app coming soon'
+        fine = f'Free · Open source · macOS 15 or later · Version {rel("version")} · iPhone and iPad beta on TestFlight'
     else:
         pill = "Mac and iPhone · Free · Coming soon"
         primary = f'<a class="button" href="{NEWSLETTER}" target="_blank" rel="noopener noreferrer">{ICON_BELL}Get launch news</a>'
@@ -417,7 +420,7 @@ def index():
     <section id="iphone" class="section">
       <div class="shell split">
         <div>
-          <span class="mark">iphone · coming soon</span>
+          <span class="mark">iphone and ipad · testflight beta</span>
           <h2>Review it <em>in a spare minute.</em></h2>
           <p class="lead">The iPhone app turns new transactions into a short review inbox. Swipe through them while you wait for coffee, and everything you mark syncs back to your Mac through your private iCloud.</p>
           <ul class="ticks">
@@ -425,6 +428,10 @@ def index():
             <li><span><strong>Widgets and Shortcuts.</strong> Net worth, budgets and what’s left to spend on your Home Screen, plus App Intents for Shortcuts and Siri.</span></li>
             <li><span><strong>Apple Wallet on board.</strong> Apple Card, Apple Cash and Savings come in straight from FinanceKit on your iPhone.</span></li>
           </ul>
+          <div class="actions actions-left">
+            {TF_BUTTON}
+          </div>
+          <p class="fineprint">{TF_NOTE}</p>
         </div>
 {phone()}      </div>
     </section>
@@ -488,11 +495,13 @@ def index():
         <div>
           <span class="mark">download</span>
           <h2 id="download-title">Bucksley for <em>Mac.</em></h2>
-          <p class="lead">Free for Macs running macOS 15 or later. Code signed, notarized by Apple, and kept up to date automatically. The iPhone app is coming soon.</p>
+          <p class="lead">Free for Macs running macOS 15 or later. Code signed, notarized by Apple, and kept up to date automatically. The iPhone and iPad app is in beta on&nbsp;TestFlight.</p>
           <div class="actions">
             <a class="button mac-download" href="/download/">{APPLE} Download and install</a>
             <a class="button secondary" href="/mcp/">{ICON_PLUG}MCP setup</a>
+            {TF_BUTTON}
           </div>
+          <p class="fineprint">{TF_NOTE}</p>
         </div>
         <ol class="install-steps" aria-label="Getting started">
 {steps}
@@ -606,6 +615,10 @@ def download():
         <a class="button download-button mac-download" href="{DMG}" download>{big_apple}<span>Download Bucksley {rel("version")}</span></a>
         <p class="fineprint">macOS 15 or later · Version {rel("version")} (build {rel("build")}) · {rel("size")}</p>
         <p class="fineprint">Code signed · Notarized by Apple · Signed automatic updates</p>
+        <div class="testflight-get">
+          {TF_BUTTON}
+          <p class="fineprint">{TF_NOTE}</p>
+        </div>
       </div>
     </div>
     <section class="shell download-guide" id="install" aria-labelledby="install-title">
@@ -633,7 +646,7 @@ def download():
           </tbody>
         </table>
       </div>
-      <p>The iPhone app, with the review inbox, Apple Wallet accounts and widgets, is coming. Check back at <a href="https://projectatom.ai/">projectatom.ai</a> for more information.</p>
+      <p>The iPhone and iPad companion app, with the review inbox, Apple Wallet accounts and widgets, is in beta on <a href="{TESTFLIGHT}" target="_blank" rel="noopener noreferrer">TestFlight</a>. It pairs with the Mac&nbsp;app.</p>
     </section>
   </main>
 ''' + footer()
@@ -720,7 +733,7 @@ def faq():
              ("Which AI agents can work with Bucksley?", "Claude Code, Codex and Claude chat, through a local MCP server with 18 tools. Agents can only read until you turn on Let agents make changes, and every change is logged.")]
     if LIVE:
         items.insert(3, ("How does it update?", "Bucksley checks for new versions and installs signed updates automatically. You can also choose Check for Updates from the Bucksley menu."))
-        items.insert(4, ("Is there an iPhone app?", "The iPhone app is coming soon. It will sync with your Mac through your own private iCloud database."))
+        items.insert(4, ("Is there an iPhone app?", f"Yes, in beta. Join the iPhone and iPad beta on TestFlight at {TESTFLIGHT}. It syncs with your Mac through your own private iCloud database."))
     return items
 
 
@@ -829,11 +842,11 @@ def notfound():
 
 def llms():
     if LIVE:
-        platform = "- Platform: Mac, macOS 15 or later. The iPhone app (iOS 18 or later) is coming soon and is not on the App Store yet."
+        platform = f"- Platform: Mac, macOS 15 or later. The iPhone and iPad companion app (iOS 18 or later) is in beta on TestFlight ({TESTFLIGHT}) and pairs with the Mac app. It is not on the App Store."
         install = (f"- Install: a signed and notarized disk image from {SITE}/download/ with signed automatic updates (Sparkle).\n"
                    f"- Download: {SITE}{DMG}\n"
                    f"- Current release: Bucksley {REL['version']} (build {REL['build']}), {REL['size']}. SHA-256: {REL['sha']}")
-        status = "Bucksley for Mac is available. The iPhone app is coming soon."
+        status = "Bucksley for Mac is available. The iPhone and iPad companion app is in beta on TestFlight."
     else:
         platform = "- Platform: Mac (macOS 15 or later) and iPhone (iOS 18 or later). Both are in development and not available yet."
         install = "- Status: coming soon. There is no download yet and it is not on the App Store."

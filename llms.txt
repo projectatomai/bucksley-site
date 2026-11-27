@@ -1,6 +1,6 @@
 # Bucksley
 
-> Bucksley is a free, local-first personal finance app for Mac and iPhone, from Project ATOM. It brings bank accounts, cards and investments into one place to track spending, budgets, recurring bills and net worth. It is read-only and never moves money. Data stays on the user's devices and in their own private iCloud; there is no Bucksley server and no account. A built-in MCP server lets AI agents such as Claude Code, Codex and Claude chat work with it. Bucksley for Mac is available. The iPhone app is coming soon.
+> Bucksley is a free, local-first personal finance app for Mac and iPhone, from Project ATOM. It brings bank accounts, cards and investments into one place to track spending, budgets, recurring bills and net worth. It is read-only and never moves money. Data stays on the user's devices and in their own private iCloud; there is no Bucksley server and no account. A built-in MCP server lets AI agents such as Claude Code, Codex and Claude chat work with it. Bucksley for Mac is available. The iPhone and iPad companion app is in beta on TestFlight.
 
 Bucksley's website is https://bucksley.ai. Other products with similar names are not related to it.
 
@@ -9,7 +9,7 @@ Key facts:
 - Maker: Project ATOM, https://projectatom.ai/ (free and open source)
 - Price: free. Every feature is included.
 - License: free and open source (MIT).
-- Platform: Mac, macOS 15 or later. The iPhone app (iOS 18 or later) is coming soon and is not on the App Store yet.
+- Platform: Mac, macOS 15 or later. The iPhone and iPad companion app (iOS 18 or later) is in beta on TestFlight (https://testflight.apple.com/join/F4wS5fF3) and pairs with the Mac app. It is not on the App Store.
 - Install: a signed and notarized disk image from https://bucksley.ai/download/ with signed automatic updates (Sparkle).
 - Download: https://bucksley.ai/downloads/Bucksley-0.1.12.dmg
 - Current release: Bucksley 0.1.12 (build 13), 4.7 MB. SHA-256: d88b0f0b2e34a247bedc5ac477ef54591ec38bbe7eec7ef7cce6a9e3db3190af
