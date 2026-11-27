@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Writes the bucksley-site pages (index, download, mcp, help, privacy, 404) and llms.txt on the house
 app-site template, with one shared head, header and footer. tools/family.html is the template's
-home-page tail (Discord and newsletter callouts, </main>, the More from Protomota block), kept
+home-page tail (Discord and newsletter callouts, </main>, the More from Project ATOM block), kept
 unchanged apart from the app name.
 
 Two states. Until the first signed Mac build ships, every page says "Coming soon" and the JSON-LD
@@ -55,11 +55,8 @@ DESC = ("Bucksley is a free, local-first personal finance app for Mac and iPhone
         "never moves money, and keeps your data on your devices and in your own iCloud, with no Bucksley server. " + STATUS)
 TITLE = "Bucksley · Every account in one place, on your Mac and iPhone"
 
-ORG = {"@type": "Organization", "@id": "https://protomota.com/#protomota", "name": "Protomota", "legalName": "Protomota, LLC",
-       "url": "https://protomota.com/", "logo": "https://protomota.com/redesign/logo.png", "founder": {"@id": "https://protomota.com/#brad"},
-       "sameAs": ["https://github.com/protomota", "https://x.com/protomotalab", "https://youtube.com/@protomota", "https://newsletter.protomota.com"]}
-PERSON = {"@type": "Person", "@id": "https://protomota.com/#brad", "name": "Brad Dunlap", "url": "https://protomota.com/about",
-          "sameAs": ["https://www.linkedin.com/in/brad--dunlap/", "https://github.com/protomota"]}
+ORG = {"@type": "Organization", "@id": "https://projectatom.ai/#org", "name": "Project ATOM", "url": "https://projectatom.ai/",
+       "logo": "https://projectatom.ai/action/atom/atom-lockup.webp"}
 APP = {"@type": "SoftwareApplication", "@id": f"{SITE}/#app", "name": "Bucksley", "url": f"{SITE}/", "description": DESC,
        "applicationCategory": "FinanceApplication", "applicationSubCategory": "Personal finance and budgeting",
        "operatingSystem": "macOS 15 or later, iOS 18 or later", "isAccessibleForFree": True,
@@ -71,8 +68,8 @@ APP = {"@type": "SoftwareApplication", "@id": f"{SITE}/#app", "name": "Bucksley"
                        "Categories, groups and rules", "Budgets with rollover and pace", "Recurring bills and subscriptions",
                        "Ask Bucksley, with Apple's on-device model by default", "iPhone review inbox synced through your private iCloud",
                        "Read-only: never moves money", "Built-in MCP server with 18 tools for Claude Code, Codex and Claude chat"],
-       "author": {"@id": "https://protomota.com/#brad"}, "publisher": {"@id": "https://protomota.com/#protomota"},
-       "sameAs": ["https://protomota.com/apps"]}
+       "author": {"@id": "https://projectatom.ai/#org"}, "publisher": {"@id": "https://projectatom.ai/#org"},
+       "sameAs": ["https://projectatom.ai/apps"]}
 if LIVE:
     APP.update({"softwareVersion": REL["version"], "downloadUrl": SITE + DMG, "installUrl": f"{SITE}/download/"})
 
@@ -86,12 +83,11 @@ ICON_CHAT = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke=
 ICON_HOME = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>'
 ICON_HELP = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>'
 ICON_ACTION = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg>'
-NEWSLETTER = "https://newsletter.protomota.com/"
+NEWSLETTER = "https://discord.gg/FMfeU8cypS"
 
 NAV = [("/#features", "Features", "nav-hide"), ("/#connect", "Connect", "nav-hide"), ("/#iphone", "iPhone", "nav-hide"), ("/mcp/", "MCP setup", "nav-hide-sm")]
 FOOT_NAV = [("/download/", "Download" if LIVE else "Coming soon"), ("/mcp/", "MCP setup"), ("/help/", "Support"), ("/privacy/", "Privacy"),
-            ("https://newsletter.protomota.com/", "Newsletter"), ("https://x.com/ProtomotaLab", "Follow on X"),
-            ("https://projectatom.ai/", "Project ATOM"), ("https://protomota.com/apps?app=bucksley#feedback", "Send Feedback")]
+            ("https://projectatom.ai/", "Project ATOM"), ("https://projectatom.ai/apps?app=bucksley#feedback", "Send Feedback")]
 
 
 def ld(graph):
@@ -117,21 +113,21 @@ def head(path, title, desc, graph, noindex=False, home=False):
             '  <meta property="og:image:type" content="image/png">',
             '  <meta property="og:image:width" content="1200">', '  <meta property="og:image:height" content="630">',
             '  <meta property="og:image:alt" content="Bucksley. Every account, one honest picture. Personal finance for Mac and iPhone. Free and open source.">',
-            '  <meta name="twitter:card" content="summary_large_image">', '  <meta name="twitter:site" content="@ProtomotaLab">',
+            '  <meta name="twitter:card" content="summary_large_image">',
             f'  <meta name="twitter:title" content="{title}">', f'  <meta name="twitter:description" content="{desc}">',
             f'  <meta name="twitter:image" content="{SITE}/social-card.png?v={V}">',
-            '  <meta name="author" content="Brad Dunlap">']
+            '  <meta name="author" content="Project ATOM">']
     if home:
         if GSC:
             meta.append(f'  <meta name="google-site-verification" content="{GSC}">')
         meta.append(f'  <meta name="msvalidate.01" content="{BING}">')
     meta += [f'  <link rel="icon" href="/favicon.png?v={V}" type="image/png">', f'  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v={V}">',
              '  <link rel="stylesheet" href="/assets/site.css">',
-             '  <link rel="stylesheet" href="/protomota-family.css">' if home else None,
+             '  <link rel="stylesheet" href="/atom-family.css">' if home else None,
              '  <link rel="stylesheet" href="/project-atom/project-atom-promo.css?v=20261126b">' if home else None,
              f'  <script src="/assets/analytics.js" data-ga="{GA}" data-site="bucksley" data-host="bucksley.ai" data-privacy="/privacy/" data-footer=".footer nav" data-css="/assets/analytics.css" defer></script>',
              '  <script src="/assets/site.js" defer></script>' if home else None,
-             '  <script src="/assets/protomota-share.js" defer></script>' if home else None,
+             '  <script src="/assets/share.js" defer></script>' if home else None,
              f'  <title>{title}</title>', ('  ' + ld(graph)) if graph else None]
     return '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n' + "\n".join(m for m in meta if m) + "\n</head>\n"
 
@@ -164,11 +160,11 @@ def footer(family=False):
     nav = "".join(f'<a href="{h}">{t}</a>' for h, t in FOOT_NAV)
     return (FAMILY if family else "") + f'''  <footer>
     <div class="shell footer">
-      <a class="product-credit" href="https://protomota.com/" target="_blank" rel="noopener noreferrer"><img src="/assets/protomota-logo.png" width="22" height="22" alt=""><span>A Protomota Product</span></a>
+      <a class="product-credit" href="https://projectatom.ai/" target="_blank" rel="noopener noreferrer"><img src="/project-atom/atom-credit.webp" width="46" height="20" alt="" style="width:46px;height:20px;border-radius:0;box-shadow:none;outline:0;border:0;filter:none"><span>A Project ATOM project</span></a>
       <nav aria-label="Footer">{nav}</nav>
     </div>
     <div class="shell footer-credit">
-      <span>&copy; <span data-pm-year>2026</span> Protomota · <a href="https://protomota.com/about#hosting" style="color:inherit">Hosted on Cloudflare</a></span>
+      <span>Hosted on Cloudflare</span>
     </div>
   </footer>
   <script src="/assets/pm-year.js" defer></script>
@@ -184,7 +180,7 @@ def crumbs(name, path):
 
 def webpage(path, name, desc):
     return {"@type": "WebPage", "@id": f"{SITE}{path}#webpage", "url": SITE + path, "name": name, "description": desc,
-            "isPartOf": {"@id": f"{SITE}/#website"}, "inLanguage": "en-US", "publisher": {"@id": "https://protomota.com/#protomota"},
+            "isPartOf": {"@id": f"{SITE}/#website"}, "inLanguage": "en-US", "publisher": {"@id": "https://projectatom.ai/#org"},
             "about": {"@id": f"{SITE}/#app"}}
 
 
@@ -322,8 +318,8 @@ TOOLS = [("get_status", "Which connections are set up, how many accounts and tra
 
 def index():
     graph = [{"@type": "WebSite", "@id": f"{SITE}/#website", "url": SITE + "/", "name": "Bucksley", "description": DESC, "inLanguage": "en-US",
-              "publisher": {"@id": "https://protomota.com/#protomota"}},
-             {**webpage("/", TITLE, DESC), "mainEntity": {"@id": f"{SITE}/#app"}}, APP, ORG, PERSON]
+              "publisher": {"@id": "https://projectatom.ai/#org"}},
+             {**webpage("/", TITLE, DESC), "mainEntity": {"@id": f"{SITE}/#app"}}, APP, ORG]
     share = ('<button type="button" class="pm-share-btn bk-share" data-pm-share data-share-url="https://bucksley.ai/" data-share-title="Bucksley" '
              'data-share-text="Every account, one honest picture. Free personal finance for Mac and iPhone." aria-haspopup="menu" aria-label="Share Bucksley">'
              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
@@ -492,7 +488,7 @@ def index():
         <div>
           <span class="mark">download</span>
           <h2 id="download-title">Bucksley for <em>Mac.</em></h2>
-          <p class="lead">Free for Macs running macOS 15 or later. Signed by Protomota, notarized by Apple, and kept up to date automatically. The iPhone app is coming soon.</p>
+          <p class="lead">Free for Macs running macOS 15 or later. Code signed, notarized by Apple, and kept up to date automatically. The iPhone app is coming soon.</p>
           <div class="actions">
             <a class="button mac-download" href="/download/">{APPLE} Download and install</a>
             <a class="button secondary" href="/mcp/">{ICON_PLUG}MCP setup</a>
@@ -510,7 +506,7 @@ def index():
       <div class="shell">
         <span class="mark">coming soon</span>
         <h2 id="closing-title">Free and <em>open source.</em></h2>
-        <p class="lead">Bucksley is in development for Mac and iPhone. Join the Protomota newsletter or our Discord to hear the day it ships.</p>
+        <p class="lead">Bucksley is in development for Mac and iPhone. Join our Discord to hear the day it ships.</p>
         <div class="actions actions-left">
           <a class="button" href="{NEWSLETTER}" target="_blank" rel="noopener noreferrer">{ICON_BELL}Get launch news</a>
           <a class="button secondary" href="/download/">What’s coming {ICON_ARROW}</a>
@@ -518,7 +514,7 @@ def index():
       </div>
     </section>
 '''
-    # Discord and newsletter callouts, </main> and the More from Protomota block come from the template.
+    # Discord and newsletter callouts, </main> and the More from Project ATOM block come from the template.
     h += footer(family=True)
     write("index.html", h)
 
@@ -548,7 +544,7 @@ WHATS_NEW = [("Home", "Net worth stacked by cash, investments and crypto, every 
 def download():
     if not LIVE:
         d = "Bucksley for Mac and iPhone is in development. See what the first release includes and how to hear when it ships."
-        graph = [webpage("/download/", "Coming soon · Bucksley", d), crumbs("Coming soon", "/download/"), APP, ORG, PERSON]
+        graph = [webpage("/download/", "Coming soon · Bucksley", d), crumbs("Coming soon", "/download/"), APP, ORG]
         tr = "\n".join(f'              <tr><td>{a}</td><td>{b}</td><td><span class="status {c}">{s}</span></td></tr>' for a, b, c, s in FIRST_RELEASE)
         h = head("/download/", "Coming soon · Bucksley", d, graph) + header("/download/") + f'''  <main id="main">
     <div class="shell page-head">
@@ -557,7 +553,7 @@ def download():
       <p class="lead">{d}</p>
       <div class="actions actions-left">
         <a class="button" href="{NEWSLETTER}" target="_blank" rel="noopener noreferrer">{ICON_BELL}Get launch news</a>
-        <a class="button secondary" href="https://lab.protomota.com" target="_blank" rel="noopener noreferrer">Join our Discord <span aria-hidden="true">↗</span></a>
+        <a class="button secondary" href="https://discord.gg/FMfeU8cypS" target="_blank" rel="noopener noreferrer">Join our Discord <span aria-hidden="true">↗</span></a>
       </div>
     </div>
     <div class="shell doc single">
@@ -589,7 +585,7 @@ def download():
         write("download/index.html", h)
         return
     d = "Download Bucksley for Mac. Free, signed and notarized, with automatic updates. Install it, connect your accounts and see the whole picture."
-    graph = [webpage("/download/", "Download and install Bucksley for Mac", d), crumbs("Download", "/download/"), APP, ORG, PERSON]
+    graph = [webpage("/download/", "Download and install Bucksley for Mac", d), crumbs("Download", "/download/"), APP, ORG]
     rows = "\n".join(f'              <tr><td>{a}</td><td>{b}</td></tr>' for a, b in WHATS_NEW)
     big_apple = APPLE.replace('width="16" height="16"', 'width="20" height="20"')
     h = head("/download/", "Download and install Bucksley for Mac", d, graph) + header("/download/") + f'''  <main id="main">
@@ -603,13 +599,13 @@ def download():
         <h2 id="download-support-title">Free software. <span>Shaped by people.</span></h2>
         <p class="support-copy">Every Bucksley feature is free, with nothing to unlock. Report a bug, suggest a bank or a feature, or tell us how Bucksley is working for you.</p>
         <div class="support-actions">
-          <a class="button secondary" href="https://protomota.com/apps?app=bucksley#feedback">{ICON_CHAT}Send Feedback <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="https://projectatom.ai/apps?app=bucksley#feedback">{ICON_CHAT}Send Feedback <span aria-hidden="true">↗</span></a>
         </div>
       </section>
       <div class="download-get">
         <a class="button download-button mac-download" href="{DMG}" download>{big_apple}<span>Download Bucksley {rel("version")}</span></a>
         <p class="fineprint">macOS 15 or later · Version {rel("version")} (build {rel("build")}) · {rel("size")}</p>
-        <p class="fineprint">Signed by Protomota · Notarized by Apple · Signed automatic updates</p>
+        <p class="fineprint">Code signed · Notarized by Apple · Signed automatic updates</p>
       </div>
     </div>
     <section class="shell download-guide" id="install" aria-labelledby="install-title">
@@ -637,7 +633,7 @@ def download():
           </tbody>
         </table>
       </div>
-      <p>The iPhone app, with the review inbox, Apple Wallet accounts and widgets, is coming. Follow along on the <a href="https://newsletter.protomota.com/">Protomota newsletter</a>.</p>
+      <p>The iPhone app, with the review inbox, Apple Wallet accounts and widgets, is coming. Follow along in <a href="https://discord.gg/FMfeU8cypS">our Discord</a>.</p>
     </section>
   </main>
 ''' + footer()
@@ -646,7 +642,7 @@ def download():
 
 def mcp():
     d = "How Bucksley’s built-in MCP server lets Claude Code, Codex and Claude chat answer questions about your money, review transactions and write rules."
-    graph = [webpage("/mcp/", "MCP setup · Bucksley", d), crumbs("MCP setup", "/mcp/"), APP, ORG, PERSON]
+    graph = [webpage("/mcp/", "MCP setup · Bucksley", d), crumbs("MCP setup", "/mcp/"), APP, ORG]
     tools = "\n".join(f'              <tr><td><code>{n}</code></td><td>{t}</td></tr>' for n, t in TOOLS)
     intro = ("Bucksley’s MCP server runs on your Mac, on the same data as the app. Install Bucksley, add it to your agent, and ask."
              if LIVE else "Bucksley’s MCP server runs on your Mac, on the same data as the app. Here’s how it will connect and what your agent can do. It works once the Mac app ships.")
@@ -713,8 +709,8 @@ def mcp():
 
 def faq():
     get = (("How do I get it?", "Download the signed and notarized disk image from bucksley.ai/download, open it and drag Bucksley into Applications. It needs macOS 15 or later.")
-           if LIVE else ("When can I get it?", "Bucksley is in development for Mac and iPhone. Join the Protomota newsletter or Discord to hear when the first release ships."))
-    items = [("What is Bucksley?", "Bucksley is a free personal finance app for Mac and iPhone, made by Protomota. It brings your bank accounts, cards and investments into one place to track spending, budgets, recurring bills and net worth. It is read-only and has no server: your data stays on your devices and in your own iCloud."),
+           if LIVE else ("When can I get it?", "Bucksley is in development for Mac and iPhone. Join our Discord to hear when the first release ships."))
+    items = [("What is Bucksley?", "Bucksley is a free personal finance app for Mac and iPhone, from Project ATOM. It brings your bank accounts, cards and investments into one place to track spending, budgets, recurring bills and net worth. It is read-only and has no server: your data stays on your devices and in your own iCloud."),
              get,
              ("Is it free?", "Yes. Bucksley is free and open source, with no account, no trial and nothing to unlock."),
              ("How does it connect to my bank?", "Through services you sign up for yourself: SimpleFIN Bridge, or Plaid with your own developer keys. On iPhone it can also read Apple Card, Apple Cash and Savings through Apple’s FinanceKit. You can also import a CSV export from another finance app."),
@@ -734,7 +730,7 @@ def help_page():
     qs = faq()
     fq = {"@type": "FAQPage", "@id": f"{SITE}/help/#faq", "url": f"{SITE}/help/",
           "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qs]}
-    graph = [webpage("/help/", "Help · Bucksley", d), fq, crumbs("Help", "/help/"), APP, ORG, PERSON]
+    graph = [webpage("/help/", "Help · Bucksley", d), fq, crumbs("Help", "/help/"), APP, ORG]
     qa = "\n".join(f"          <h3>{q}</h3>\n          <p>{a}</p>" for q, a in qs)
     h = head("/help/", "Help · Bucksley", d, graph) + header() + f'''  <main id="main">
     <div class="shell page-head">
@@ -755,7 +751,7 @@ def help_page():
         </section>
         <section id="contact">
           <h2>Get in touch</h2>
-          <p>Ask a question or tell us which bank or feature you’d like in <a href="https://lab.protomota.com">our Discord</a>, send feedback with <a href="https://protomota.com/apps?app=bucksley#feedback">the Protomota apps form</a>, or email <a href="mailto:hello@bucksley.ai">hello@bucksley.ai</a>.</p>
+          <p>Ask a question or tell us which bank or feature you’d like in <a href="https://discord.gg/FMfeU8cypS">our Discord</a>, send feedback with <a href="https://projectatom.ai/apps?app=bucksley#feedback">our feedback form</a>, or email <a href="mailto:hello@bucksley.ai">hello@bucksley.ai</a>.</p>
         </section>
       </div>
     </div>
@@ -772,13 +768,13 @@ def privacy():
     <div class="shell page-head">
       <span class="mark">privacy</span>
       <h1>Privacy</h1>
-      <p class="lead">Bucksley is made by Protomota, LLC. Your financial data stays on your devices and in your own iCloud. There is no Bucksley server.</p>
+      <p class="lead">Bucksley is a Project ATOM project. Your financial data stays on your devices and in your own iCloud. There is no Bucksley server.</p>
     </div>
     <div class="shell doc single">
       <div class="prose">
         <section>
           <h2>The app</h2>
-          <p>Bucksley stores your workspace (accounts, balances, transactions, categories, rules, budgets, notes and tags) on your device. It has no account and no server, and sends none of your financial data to Protomota.</p>
+          <p>Bucksley stores your workspace (accounts, balances, transactions, categories, rules, budgets, notes and tags) on your device. It has no account and no server, and sends none of your financial data to us.</p>
           <p>Bucksley is read-only. It reads balances and transactions and cannot make payments, transfers or any other change at your bank.</p>{updates}
         </section>
         <section id="connections">
@@ -802,13 +798,13 @@ def privacy():
         <section>
           <h2 id="hosting">Where we host</h2>
           <p>This site runs on <a href="https://www.cloudflare.com/">Cloudflare</a>. Cloudflare serves every page and manages our traffic, so it handles standard request details such as your IP address and browser to deliver the site and protect it from abuse. Our images and downloads are stored in Cloudflare R2. Cloudflare handles that data under its <a href="https://www.cloudflare.com/privacypolicy/">privacy policy</a>.</p>
-          <p>We&rsquo;re not a Cloudflare sponsor. We chose them because we think they&rsquo;re the best value and the best service, and we&rsquo;ll keep using them for as long as that stays true. <a href="https://protomota.com/about#hosting">How we build and&nbsp;host</a></p>
+          <p>We&rsquo;re not a Cloudflare sponsor. We chose them because we think they&rsquo;re the best value and the best service, and we&rsquo;ll keep using them for as long as that stays true.</p>
         </section>
         <section>
           <h2>Website and support</h2>
           <p>The site provides information about Bucksley. Hosting providers may process request information to deliver the site. If you contact us, we use the details you send to respond.</p>
           <p>If you click Allow analytics, the site loads Google Analytics, which sets cookies to count visits, page views and link clicks. Page addresses are sent without query strings, and advertising features are off. If you decline, Google Analytics does not load. Change your choice any time with Analytics settings in the footer.</p>
-          <p><a href="https://protomota.com/apps?app=bucksley#feedback">Send Feedback</a> · <a href="mailto:hello@bucksley.ai">hello@bucksley.ai</a></p>
+          <p><a href="https://projectatom.ai/apps?app=bucksley#feedback">Send Feedback</a> · <a href="mailto:hello@bucksley.ai">hello@bucksley.ai</a></p>
         </section>
       </div>
     </div>
@@ -844,13 +840,13 @@ def llms():
         status = "Bucksley is in development and coming soon for Mac and iPhone."
     text = f"""# Bucksley
 
-> Bucksley is a free, local-first personal finance app for Mac and iPhone, made by Protomota. It brings bank accounts, cards and investments into one place to track spending, budgets, recurring bills and net worth. It is read-only and never moves money. Data stays on the user's devices and in their own private iCloud; there is no Bucksley server and no account. A built-in MCP server lets AI agents such as Claude Code, Codex and Claude chat work with it. {status}
+> Bucksley is a free, local-first personal finance app for Mac and iPhone, from Project ATOM. It brings bank accounts, cards and investments into one place to track spending, budgets, recurring bills and net worth. It is read-only and never moves money. Data stays on the user's devices and in their own private iCloud; there is no Bucksley server and no account. A built-in MCP server lets AI agents such as Claude Code, Codex and Claude chat work with it. {status}
 
 Bucksley's website is {SITE}. Other products with similar names are not related to it.
 
 Key facts:
 
-- Maker: Protomota (Protomota, LLC), the independent studio of Brad Dunlap. https://protomota.com
+- Maker: Project ATOM, https://projectatom.ai/ (free and open source)
 - Price: free. Every feature is included.
 - License: free and open source (MIT).
 {platform}
@@ -879,8 +875,7 @@ Key facts:
 
 ## Optional
 
-- [Bucksley on protomota.com](https://protomota.com/apps)
-- [More Protomota apps](https://protomota.com/apps): OpenTalon, Inkspring, Jotley, Glimmer, PulseCanvas Studio, Voxley, Graphley and Textley
+- [More Project ATOM apps](https://projectatom.ai/apps): OpenTalon, Inkspring, Jotley, Glimmer, PulseCanvas Studio, Voxley, Graphley and Textley
 """
     write("llms.txt", text)
 

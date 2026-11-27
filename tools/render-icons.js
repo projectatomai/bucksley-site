@@ -3,7 +3,7 @@
 // mark.svg is the master drawing; tools/mark-small.svg is the pixel-fitted drawing for small sizes.
 // Writes assets/icon.png (512, with a soft shadow), favicon.png (64, small drawing) and
 // assets/apple-touch-icon.png (180, full-bleed square; iOS rounds it). With an out dir it also
-// writes bucksley-96.png and bucksley-144.png for the More from Protomota blocks and protomota.com
+// writes bucksley-96.png and bucksley-144.png for the More from Project ATOM blocks and protomota.com
 // (convert the 96 to WebP with cwebp).
 const fs = require('fs');
 const path = require('path');
