@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Writes the bucksley-site pages (index, download, mcp, help, privacy, 404) and llms.txt on the house
 app-site template, with one shared head, header and footer. tools/family.html is the template's
-home-page tail (Discord and newsletter callouts, </main>, the More from Project ATOM block), kept
+home-page tail (community and newsletter callouts, </main>, the More from Project ATOM block), kept
 unchanged apart from the app name.
 
 Two states. Until the first signed Mac build ships, every page says "Coming soon" and the JSON-LD
@@ -83,7 +83,7 @@ ICON_CHAT = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke=
 ICON_HOME = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>'
 ICON_HELP = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>'
 ICON_ACTION = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg>'
-NEWSLETTER = "https://discord.gg/FMfeU8cypS"
+NEWSLETTER = "https://projectatom.ai/apps?app=bucksley#feedback"
 
 NAV = [("/#features", "Features", "nav-hide"), ("/#connect", "Connect", "nav-hide"), ("/#iphone", "iPhone", "nav-hide"), ("/mcp/", "MCP setup", "nav-hide-sm")]
 FOOT_NAV = [("/download/", "Download" if LIVE else "Coming soon"), ("/mcp/", "MCP setup"), ("/help/", "Support"), ("/privacy/", "Privacy"),
@@ -506,7 +506,7 @@ def index():
       <div class="shell">
         <span class="mark">coming soon</span>
         <h2 id="closing-title">Free and <em>open source.</em></h2>
-        <p class="lead">Bucksley is in development for Mac and iPhone. Join our Discord to hear the day it ships.</p>
+        <p class="lead">Bucksley is in development for Mac and iPhone. Check back at projectatom.ai for news.</p>
         <div class="actions actions-left">
           <a class="button" href="{NEWSLETTER}" target="_blank" rel="noopener noreferrer">{ICON_BELL}Get launch news</a>
           <a class="button secondary" href="/download/">What’s coming {ICON_ARROW}</a>
@@ -514,7 +514,7 @@ def index():
       </div>
     </section>
 '''
-    # Discord and newsletter callouts, </main> and the More from Project ATOM block come from the template.
+    # Community and newsletter callouts, </main> and the More from Project ATOM block come from the template.
     h += footer(family=True)
     write("index.html", h)
 
@@ -553,7 +553,7 @@ def download():
       <p class="lead">{d}</p>
       <div class="actions actions-left">
         <a class="button" href="{NEWSLETTER}" target="_blank" rel="noopener noreferrer">{ICON_BELL}Get launch news</a>
-        <a class="button secondary" href="https://discord.gg/FMfeU8cypS" target="_blank" rel="noopener noreferrer">Join our Discord <span aria-hidden="true">↗</span></a>
+        <a class="button secondary" href="https://projectatom.ai/" target="_blank" rel="noopener noreferrer">Visit projectatom.ai <span aria-hidden="true">↗</span></a>
       </div>
     </div>
     <div class="shell doc single">
@@ -633,7 +633,7 @@ def download():
           </tbody>
         </table>
       </div>
-      <p>The iPhone app, with the review inbox, Apple Wallet accounts and widgets, is coming. Follow along in <a href="https://discord.gg/FMfeU8cypS">our Discord</a>.</p>
+      <p>The iPhone app, with the review inbox, Apple Wallet accounts and widgets, is coming. Check back at <a href="https://projectatom.ai/">projectatom.ai</a> for more information.</p>
     </section>
   </main>
 ''' + footer()
@@ -709,7 +709,7 @@ def mcp():
 
 def faq():
     get = (("How do I get it?", "Download the signed and notarized disk image from bucksley.ai/download, open it and drag Bucksley into Applications. It needs macOS 15 or later.")
-           if LIVE else ("When can I get it?", "Bucksley is in development for Mac and iPhone. Join our Discord to hear when the first release ships."))
+           if LIVE else ("When can I get it?", "Bucksley is in development for Mac and iPhone. Check back at projectatom.ai for news."))
     items = [("What is Bucksley?", "Bucksley is a free personal finance app for Mac and iPhone, from Project ATOM. It brings your bank accounts, cards and investments into one place to track spending, budgets, recurring bills and net worth. It is read-only and has no server: your data stays on your devices and in your own iCloud."),
              get,
              ("Is it free?", "Yes. Bucksley is free and open source, with no account, no trial and nothing to unlock."),
@@ -751,7 +751,7 @@ def help_page():
         </section>
         <section id="contact">
           <h2>Get in touch</h2>
-          <p>Ask a question or tell us which bank or feature you’d like in <a href="https://discord.gg/FMfeU8cypS">our Discord</a>, send feedback with <a href="https://projectatom.ai/apps?app=bucksley#feedback">our feedback form</a>, or email <a href="mailto:hello@bucksley.ai">hello@bucksley.ai</a>.</p>
+          <p>Ask a question or tell us which bank or feature you’d like in <a href="https://projectatom.ai/apps?app=bucksley#feedback">our Send feedback</a>, send feedback with <a href="https://projectatom.ai/apps?app=bucksley#feedback">our feedback form</a>, or email <a href="mailto:hello@bucksley.ai">hello@bucksley.ai</a>.</p>
         </section>
       </div>
     </div>
