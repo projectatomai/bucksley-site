@@ -861,7 +861,7 @@ Key facts:
 
 - Maker: Project ATOM, https://projectatom.ai/ (free and open source)
 - Price: free. Every feature is included.
-- License: free and open source (MIT).
+- License: free and open source (public domain).
 {platform}
 {install}
 - Connections: SimpleFIN Bridge (the user's own account), Plaid with the user's own developer keys, Apple Card, Apple Cash and Savings through Apple FinanceKit on iPhone, and CSV import from other finance apps. All read-only.

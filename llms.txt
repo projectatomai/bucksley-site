@@ -8,7 +8,7 @@ Key facts:
 
 - Maker: Project ATOM, https://projectatom.ai/ (free and open source)
 - Price: free. Every feature is included.
-- License: free and open source (MIT).
+- License: free and open source (public domain).
 - Platform: Mac, macOS 15 or later. The iPhone and iPad companion app (iOS 18 or later) is in beta on TestFlight (https://testflight.apple.com/join/F4wS5fF3) and pairs with the Mac app. It is not on the App Store.
 - Install: a signed and notarized disk image from https://bucksley.ai/download/ with signed automatic updates (Sparkle).
 - Download: https://bucksley.ai/downloads/Bucksley-0.1.12.dmg
