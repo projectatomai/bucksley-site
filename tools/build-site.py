@@ -163,7 +163,7 @@ def footer(family=False):
     nav = "".join(f'<a href="{h}">{t}</a>' for h, t in FOOT_NAV)
     return (FAMILY if family else "") + f'''  <footer>
     <div class="shell footer">
-      <a class="product-credit" href="https://projectatom.ai/" target="_blank" rel="noopener noreferrer"><img src="/project-atom/atom-icon.svg?v=20261127" width="24" height="24" alt="" style="width:24px;height:24px;border-radius:7px;box-shadow:0 0 0 1px rgba(255,255,255,.12);outline:0;border:0;filter:none"><span>A Project ATOM project</span></a>
+      <a class="product-credit" href="https://projectatom.ai/" target="_blank" rel="noopener noreferrer"><img src="/project-atom/atom-icon.svg?v=20261127" width="24" height="24" alt="" style="width:24px;height:24px;border-radius:7px;box-shadow:0 0 0 1px rgba(255,255,255,.12);outline:0;border:0;filter:none"><span>Made by Project ATOM</span></a>
       <nav aria-label="Footer">{nav}</nav>
     </div>
     <div class="shell footer-credit">
@@ -781,7 +781,7 @@ def privacy():
     <div class="shell page-head">
       <span class="mark">privacy</span>
       <h1>Privacy</h1>
-      <p class="lead">Bucksley is a Project ATOM project. Your financial data stays on your devices and in your own iCloud. We never see it. Updated November 27, 2026.</p>
+      <p class="lead">Bucksley is made by Project ATOM. Your financial data stays on your devices and in your own iCloud. We never see it. Updated November 27, 2026.</p>
     </div>
     <div class="shell doc single">
       <div class="prose">
