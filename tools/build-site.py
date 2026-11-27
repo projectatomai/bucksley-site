@@ -89,7 +89,7 @@ ICON_ACTION = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" strok
 NEWSLETTER = "https://projectatom.ai/apps?app=bucksley#feedback"
 
 NAV = [("/#features", "Features", "nav-hide"), ("/#connect", "Connect", "nav-hide"), ("/#iphone", "iPhone", "nav-hide"), ("/mcp/", "MCP setup", "nav-hide-sm")]
-FOOT_NAV = [("/download/", "Download" if LIVE else "Coming soon"), ("/mcp/", "MCP setup"), ("/help/", "Support"), ("/privacy/", "Privacy"),
+FOOT_NAV = [("/download/", "Download" if LIVE else "Coming soon"), ("/mcp/", "MCP setup"), ("/help/", "Support"), ("/privacy/", "Privacy"), ("/terms/", "Terms"),
             ("https://projectatom.ai/", "Project ATOM"), ("https://projectatom.ai/apps?app=bucksley#feedback", "Send Feedback")]
 
 
@@ -781,19 +781,20 @@ def privacy():
     <div class="shell page-head">
       <span class="mark">privacy</span>
       <h1>Privacy</h1>
-      <p class="lead">Bucksley is a Project ATOM project. Your financial data stays on your devices and in your own iCloud. There is no Bucksley server.</p>
+      <p class="lead">Bucksley is a Project ATOM project. Your financial data stays on your devices and in your own iCloud. We never see it. Updated November 27, 2026.</p>
     </div>
     <div class="shell doc single">
       <div class="prose">
         <section>
           <h2>The app</h2>
-          <p>Bucksley stores your workspace (accounts, balances, transactions, categories, rules, budgets, notes and tags) on your device. It has no account and no server, and sends none of your financial data to us.</p>
+          <p>Bucksley stores your workspace (accounts, balances, transactions, categories, rules, budgets, notes and tags) on your device. It has no account, and it sends none of your financial data to us.</p>
           <p>Bucksley is read-only. It reads balances and transactions and cannot make payments, transfers or any other change at your bank.</p>{updates}
         </section>
         <section id="connections">
           <h2>Bank connections</h2>
           <p>Bucksley connects to financial institutions only through services you set up yourself. With SimpleFIN Bridge or Plaid, your device fetches balances and transactions directly from that service under your own account and keys; their privacy terms apply to what they hold. Bucksley never sees your bank password. On iPhone, Apple Card, Apple Cash and Savings are read through Apple’s FinanceKit only with your permission. CSV files you import are read on your device.</p>
-          <p>Connection secrets (such as a SimpleFIN access URL or Plaid access token) and your Plaid keys are kept in the Keychain, never in the synced workspace.</p>
+          <p>For Coinbase, you can paste your own API key, or sign in with Coinbase. Sign-in passes through connect.bucksley.ai, a small relay that adds our app secret to the sign-in request and passes it on to Coinbase. It stores nothing. Your Coinbase sign-in is kept in your Mac’s Keychain, and balances are read straight from Coinbase.</p>
+          <p>Connection secrets (such as a SimpleFIN access URL, Plaid access token or Coinbase sign-in) and your Plaid keys are kept in the Keychain, never in the synced workspace.</p>
         </section>
         <section>
           <h2>iCloud sync</h2>
@@ -813,17 +814,72 @@ def privacy():
           <p>This site runs on <a href="https://www.cloudflare.com/">Cloudflare</a>. Cloudflare serves every page and manages our traffic, so it handles standard request details such as your IP address and browser to deliver the site and protect it from abuse. Our images and downloads are stored in Cloudflare R2. Cloudflare handles that data under its <a href="https://www.cloudflare.com/privacypolicy/">privacy policy</a>.</p>
           <p>We&rsquo;re not a Cloudflare sponsor. We chose them because we think they&rsquo;re the best value and the best service, and we&rsquo;ll keep using them for as long as that stays true.</p>
         </section>
-        <section>
-          <h2>Website and support</h2>
-          <p>The site provides information about Bucksley. Hosting providers may process request information to deliver the site. If you contact us, we use the details you send to respond.</p>
-          <p>If you click Allow analytics, the site loads Google Analytics, which sets cookies to count visits, page views and link clicks. Page addresses are sent without query strings, and advertising features are off. If you decline, Google Analytics does not load. Change your choice any time with Analytics settings in the footer.</p>
-          <p><a href="https://projectatom.ai/apps?app=bucksley#feedback">Send Feedback</a> · <a href="mailto:hello@bucksley.ai">hello@bucksley.ai</a></p>
+        <section id="website">
+          <h2>This website</h2>
+          <p>bucksley.ai has no sign-up form and no account. If you click Allow analytics, the site loads Google Analytics, which sets cookies to count visits, page views and link clicks. Page addresses are sent without query strings, and advertising features are off. If you decline, Google Analytics does not load. Change your choice any time with Analytics settings in the footer.</p>
+        </section>
+        <section id="feedback">
+          <h2>Feedback and support</h2>
+          <p>Help and feedback for Bucksley go through the <a href="https://projectatom.ai/apps?app=bucksley#feedback">feedback form at projectatom.ai</a>. We receive the app you pick, your message and, only if you add it, your email address. The note is emailed to our team through Cloudflare Email. If you leave an email, we reply to it and keep it in our contact list (HubSpot) so we can follow up. If you leave it out, we can’t reply.</p>
+          <p>The app never sends a report on its own. Only what you type into the form is sent, so please leave private files and details out of it.</p>
+        </section>
+        <section id="contact">
+          <h2>Questions and changes</h2>
+          <p>We don’t sell your information, and we don’t use it for advertising. To ask what we hold, or to have it corrected or deleted, email <a href="mailto:hello@projectatom.ai">hello@projectatom.ai</a> or use the feedback form. We answer within 30 days.</p>
+          <p>If this page changes, the date at the top changes with it.</p>
         </section>
       </div>
     </div>
   </main>
 ''' + footer()
     write("privacy/index.html", h)
+
+
+def terms():
+    t = "Terms · Bucksley"
+    d = "The terms for using Bucksley, a free, public domain app from Project ATOM, and this website."
+    graph = [webpage("/terms/", t, d), crumbs("Terms", "/terms/"), ORG]
+    h = head("/terms/", t, d, graph) + header() + '''  <main id="main">
+    <div class="shell page-head">
+      <span class="mark">terms</span>
+      <h1>Terms</h1>
+      <p class="lead">Plain terms for a free app. Updated November 27, 2026.</p>
+    </div>
+    <div class="shell doc single">
+      <div class="prose">
+        <section>
+          <h2>Using Bucksley</h2>
+          <p>Bucksley is a free app from Project ATOM for Mac and iPhone. There is no account to make, nothing to buy and no ads. We share it as a signed download for Mac and through Apple’s TestFlight, and Apple’s own terms apply to anything you get through Apple. By using Bucksley or this website, you agree to these terms.</p>
+        </section>
+        <section id="license">
+          <h2>Public domain</h2>
+          <p>Bucksley’s code is free and open source, released into the public domain under the <a href="https://unlicense.org/">Unlicense</a>. Anyone may copy, change, share or sell it, for any purpose, without asking. We claim no copyright in it. Parts made by others, such as open source libraries, keep their own licenses.</p>
+        </section>
+        <section>
+          <h2>Your work is yours</h2>
+          <p>Your accounts, budgets, notes and everything else in your workspace belong to you. We don’t claim any rights in them, and using Bucksley doesn’t give us any.</p>
+        </section>
+        <section>
+          <h2>Use it kindly</h2>
+          <p>Please don’t use Bucksley to break the law, to harm, harass or deceive anyone, to send spam, or to get around the security of Bucksley or any other service.</p>
+        </section>
+        <section>
+          <h2>Services you connect</h2>
+          <p>Some features work with services you choose, such as iCloud, SimpleFIN Bridge, Plaid, Coinbase, Claude, OpenAI or an AI agent on your Mac. Each of them has its own terms and privacy policy, and they apply when you use them through Bucksley.</p>
+        </section>
+        <section>
+          <h2>No warranty</h2>
+          <p>We build Bucksley with care, but it comes as is, with no warranty of any kind. We can’t promise it will always work, be available, or be free of mistakes. Bucksley is not financial, tax or investment advice, and the numbers it shows can be late or wrong, so check anything important with your bank. To the fullest extent the law allows, we aren’t liable for any loss or damage that comes from using it, including lost data, so keep backups of anything that matters to you. Nothing here takes away rights the law gives you that can’t be waived.</p>
+        </section>
+        <section>
+          <h2>Changes and contact</h2>
+          <p>If these terms change, the date at the top changes with them. For questions, use the <a href="https://projectatom.ai/apps?app=bucksley#feedback">feedback form</a> or email <a href="mailto:hello@projectatom.ai">hello@projectatom.ai</a>. Our <a href="/privacy/">privacy page</a> explains how Bucksley handles information.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+''' + footer()
+    write("terms/index.html", h)
 
 
 def notfound():
@@ -893,5 +949,5 @@ Key facts:
     write("llms.txt", text)
 
 
-index(); download(); mcp(); help_page(); privacy(); notfound(); llms()
+index(); download(); mcp(); help_page(); privacy(); terms(); notfound(); llms()
 print("ok", REL or "coming soon")
