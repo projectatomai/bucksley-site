@@ -3,15 +3,15 @@
     <channel>
         <title>Bucksley</title>
         <item>
-            <title>0.1.12</title>
-            <pubDate>Fri, 27 Nov 2026 09:43:31 -0500</pubDate>
+            <title>0.1.13</title>
+            <pubDate>Sat, 28 Nov 2026 10:30:58 -0500</pubDate>
             <link>https://bucksley.ai</link>
-            <sparkle:version>13</sparkle:version>
-            <sparkle:shortVersionString>0.1.12</sparkle:shortVersionString>
+            <sparkle:version>14</sparkle:version>
+            <sparkle:shortVersionString>0.1.13</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<p>We are now a Project ATOM project. Support and feedback moved to projectatom.ai.</p>
+            <description><![CDATA[<p>The Project ATOM link in Settings now shows the atom icon.</p>
 ]]></description>
-            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.12.dmg" length="4732769" type="application/octet-stream" sparkle:edSignature="P2H3Nc8AQSBPH9i2tRVH6IPHPKGYz9fe9h+EEkzDJywq56DcOw8gUlr3T9xcx5ZLTT+UZGNccrxqh62SuvomCg=="/>
+            <enclosure url="https://bucksley.ai/downloads/Bucksley-0.1.13.dmg" length="4726164" type="application/octet-stream" sparkle:edSignature="M6d94vxq57F15/1+NgPIBjY8/DSDA8zgVk2V9x46F/WjH3GsF8A+Nkr0KeGQgQsXMHDDug/vlza+xQq6/IHsBA=="/>
         </item>
     </channel>
 </rss>
